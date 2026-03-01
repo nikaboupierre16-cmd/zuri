@@ -19,14 +19,25 @@ a {
     overflow: hidden;
 }
 
-.hero-img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    z-index: 0;
-    /* transform: matrix(-1, 0, 0, 1, 0, 0); */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 1080px;
+  overflow: hidden;
+
+  background-image: url("../images/vtc_fond1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+.faq-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
 .hero-overlay {
@@ -39,58 +50,64 @@ a {
     height: 100%;
 }
 
-/* ===== NAVBAR ===== */
-.navbar {
-    width: 100%;
-    height: 90px;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
+/* ===== CORRECTION HEADER POUR SELLER ===== */
+/* S'assurer que le header est au-dessus de tout */
+#header {
+  position: relative;
+  z-index: 1000;
 }
 
-.menu {
-    max-width: 1228px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 24px;
-    width: 100%;
+#header .navbar {
+  background: transparent !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+#header .commerçant,
+#header .livreur,
+#header .vtc {
+  color: #FFFFFF !important;
 }
 
-.nav-links {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 32px;
-  list-style: none;
-  margin: 0;          /* enlève le centrage */
-  margin-right: 59%;  /* colle au logo (ajuste la valeur si besoin) */
+#header .inscription {
+  background: #FFFFFF !important;
+  color: #000000 !important;
+  mix-blend-mode: normal !important;
 }
 
-.nav-links a {
-    color: #FFFFFF;
-    font-size: 14px;
-    font-weight: 400;
-    
+/* Ajuster le logo si besoin */
+#header .logo img {
+  filter: brightness(0) invert(1); /* Rend le logo blanc si nécessaire */
 }
 
-.inscription {
-    background: #fff;
-    color: #000;
-    padding: 8px 24px;
-    border-radius: 15px;
-    font-weight: 600;
-    font-size: 14px;
+/* Pour le logo texte, ne pas l'inverser */
+#header .logo a:last-child img {
+  filter: none; /* Garde le logo texte normal */
+}
+
+/* Responsive mobile */
+@media screen and (max-width: 768px) {
+  #header .menu ul {
+      background: #ffffff !important;
+  }
+  
+  #header .menu ul li a {
+      color: #000000 !important;
+  }
+  
+  #header .logo img {
+      filter: none; /* Sur mobile, garder les logos normaux */
+  }
+}
+
+/* Responsive tablette */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #header .navbar {
+      background: transparent !important;
+      backdrop-filter: none !important;
+  }
 }
 
 /* ===== CARD DROITE (TEXTE SUR HERO) ===== */
@@ -675,51 +692,7 @@ padding: 120px 0;
     margin: 0;
 }
 
-/* ===== FOOTER ===== */
-.footer {
-    background: #f8f8f8;
-    padding: 60px 0;
-}
 
-.footer-container {
-    max-width: 1228px;
-    margin: 0 auto;
-    padding: 0 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-left p {
-    color: #666;
-}
-
-.copy {
-    color: #000;
-    font-weight: 600;
-}
-
-.footer-right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 20px;
-}
-
-.footer-socials {
-    display: flex;
-    gap: 16px;
-}
-
-.footer-links {
-    display: flex;
-    gap: 24px;
-}
-
-.footer-links a {
-    color: #666;
-    font-size: 14px;
-}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
@@ -1112,6 +1085,25 @@ padding: 120px 0;
     height: 100%;
     position: relative;
   }
+
+  .discover-card {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+ 
+  
+  .discover-livreur {
+    background-image: url("../images/livreur.jpg");
+    background-position: 90% center;
+  }
+  
+  .discover-commercant {
+    background-image: url("../images/commercant.jpg");
+    background-position: 40% center;
+  }
+
   
   .discover-card img {
     width: 100%;
@@ -1274,149 +1266,7 @@ padding: 120px 0;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
   }
   
-    /* FOOTER */
-  
-  .footer {
-      width: 100%;
-      /* background: #f5f5f5; */
-      padding: 40px 0;
-      /* background: rgba(255, 255, 255, 255); */
-    }
-    
-    .footer-container {
-      max-width: 1228px;   /* même largeur que tes autres sections */
-      width: 100%;
-      margin: 0 auto;      /* centre le container */
-      padding: 0 20px;     /* petit padding pour éviter de coller les bords */
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    /* LEFT */
-    .footer-left {
-    
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 24px;
-  /* width: 336px; */
-  height: 96px;
-  
-  
-  /* À l'intérieur de l'auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  
-    }
-    
-  .footer-left img {
-    width: 32px;
-    }
-    
-  .footer-left p {
-    font-family: 'SF Pro Display',Sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 16px;
-    display: flex;
-    align-items: center;
-    color: #000000;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    }
-    
-    /* RIGHT */
-  .footer-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 0px;
-    gap: 40px;
-    width: 274px;
-    height: 80px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    }
-    
-  .footer-socials {
-    display: flex;
-    gap: 16px;
-    }
-    
-  .footer-socials a {
-    text-decoration: none;
-    color: #FFFFFF;
-    font-size: 14px;
-    }
-  
-  .footer-socials a img{
-    width: 24px;
-    height: 24px;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-    }
-    
-  .footer-links {
-    display: flex;
-    gap: 20px;
-    color: #FFFFFF;
-    }
-    
-  .footer-links a {
-    text-decoration: none;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 16px;
-    display: flex;
-    align-items: center;
-    color: #606060;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    }
-    
-  .footer-links a:hover {
-    color: black;
-    }
-    
-  .logo_footer{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 12px 16px;
-    gap: 10px;
-    background: #000000;
-    border-radius: 16px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    }
-  
-  .logo_footer img{
-    width: 23.72px;
-    height: 32px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    }
-  
-  .copy{
-    margin-left: 5px;
-    margin-right: 5px;
-    font-weight:bold; 
-    }
+
 
     #scrollBtn {
       position: fixed;

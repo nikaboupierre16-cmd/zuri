@@ -1,153 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* navbar */
 
-.navbar{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px;
-  position: absolute;
-  width: 1228px;
-  height: 90px;
-  left: calc(50% - 1228px/2);
-  top: 0px;
-  background: rgba(255, 255, 255, 255);
-}
 
-.menu{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px;
-  gap: 32px;
-  margin: 0 auto;
-  width: 1228px;
-  height: 40px;
-  mix-blend-mode: difference;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
-.logo{
-  display: flex;
-  align-items: center;
-  gap: 8px; 
-}
-
-a{
-    text-decoration: none;
-}
-
-.nomlogo{
-  position: absolute;
-  margin-left: 38px;
-}
-
-/* ul{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px;
-  gap: 32px;
-  width: 220px;
-  height: 17px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-} */
-
-
-.menu ul {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
-li{
-display: block;
-}
-
-.commerçant{
-  width: 83px;
-  height: 17px;
-  font-family: 'SF Pro Display', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #FFFFFF;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
-.livreur{
-  width: 47px;
-  height: 17px;
-  font-family: 'SF Pro Display', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #FFFFFF;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-}
-
-.vtc{
-  font-family: 'SF Pro Display', sans-serif;;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #FFFFFF;
-  flex: none;
-  order: 2;
-  flex-grow: 0;
-}
-
-.inscription{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 24px;
-  gap: 10px;
-  margin: 0 auto;
-  width: 106px;
-  height: 33px;
-  background: #FFFFFF;
-  border-radius: 15px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  text-decoration: none;
-  margin-left: 53%;
-  color: black;
-  font-family: 'SF Pro Display', sans-serif;
-
-
-
-  /* S’inscrire */
-
-width: 58px;
-height: 17px;
-
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 17px;
-/* identique à la hauteur de la zone de texte */
-
-color: #000000;
-
-
-
-}
 
 /* section activites */
 .activites {
@@ -529,16 +383,20 @@ flex-grow: 0;
   
 .screen2 {
     position: absolute;
-    width: 82px;  /* À ajuster selon la taille du téléphone dans l'image */
-    height: 170px; /* À ajuster selon la taille du téléphone dans l'image */
+    /* width: 82px;  
+    height: 170px;  */
+    width: 70px;  
+    height: 138px;
     background: url(images/fond_phone.png);
     background-size: cover;
     border-radius: 10px; /* Coins arrondis comme un écran de téléphone */
     /* Position à ajuster précisément sur le téléphone */
-    top: 246px;    /* À ajuster */
-    left: 25px;   /* À ajuster */
+    /* top: 246px;    
+    left: 25px;    */
+    top: 218px;    
+    left: 34px; 
     /* Si besoin de rotation */
-    /* transform: rotate(5deg); */    
+    transform: rotate(1deg);    
     z-index: 1;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     
@@ -573,6 +431,40 @@ body {
   height: 100%;
 }
 
+.mosaic-item {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.item1 {
+  background-image: url("images/img1.jpg");
+  background-position: 80% center;
+  transform: scale(1.1);
+}
+
+.item2 {
+  background-image: url("images/img2.jpg");
+  background-position: 40% center;
+  transform: scaleX(-1) scale(1.0);
+}
+
+.item3 {
+  background-image: url("images/img3.jpg");
+  background-position: 80% center;
+}
+
+.item4 {
+  background-image: url("images/img4.png");
+  background-position: 40% center;
+}
+
+.item5 {
+  background-image: url("images/img5.jpg");
+  background-position: 60% center;
+}
+
 .mosaic-grid {
   display: grid;
   /* Layout exact comme dans Figma : proportions variées */
@@ -589,63 +481,7 @@ body {
   display: block;
 }
 
-/* Ajustements individuels pour chaque image - comme dans Figma */
 
-/* Image 1 - conducteur scooter */
-.mosaic-grid img:nth-child(1) {
-  /* object-position: 75% center; Décale vers la gauche pour voir le visage */
-
-  object-position: 80% center;
-  transform: scale(1.1);
-
-}
-
-.mosaic-overlay-img {
- /* Ellipse 697 */
-
-/* position: absolute;
-width: 6.65px;
-height: 15.48px;
-
-right: 19px;
-bottom: 216px;
-
-background: linear-gradient(178.83deg, #FFFFFF 1.2%, #FC9266 89.75%);
-
-opacity: 0.88;
-z-index: 1;
-border-radius: 50% 0% 0% 50%; */
-
-    
-
-   
-
-}
-
-/* Image 2 - livreur avec casque */
-.mosaic-grid img:nth-child(2) {
-  object-position: 40% center; /* Centre sur le livreur */
-  transform: scaleX(-1) scale(1.0);
-  /* transform: scale(1.2); */
-
-  
-}
-
-/* Image 3 - deux livreurs */
-.mosaic-grid img:nth-child(3) {
-  object-position: 80% center; /* Cadre sur les deux personnes */
-}
-
-/* Image 4 - livreur qui court */
-.mosaic-grid img:nth-child(4) {
-  object-position: 40% center; /* Montre l'action */
-}
-
-/* Image 5 - livreur de dos */
-.mosaic-grid img:nth-child(5) {
-  object-position: 60% center; /* Cadre sur le livreur */
-  /* transform: scale(1.2); */
-}
 
 /* Overlay plus subtil */
 .mosaic-overlay {
@@ -717,11 +553,6 @@ color: #FFFFFF;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 40px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-
-
-  /* Rejoignez l’application Zuri dès maintenant et soyez parmi les premiers à bénéficiez d'une réduction exclusive pour votre premier mois d'aventure. */
-
-/* position: absolute; */
 width: 890px;
 height: 75px;
 top: 293px;
@@ -779,6 +610,13 @@ color: rgba(255, 255, 255, 0.7);
 .faq-item {
   border-bottom: 1px solid #e5e5e5;
   cursor: pointer;
+}
+
+.faq-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
 .faq-question {
@@ -863,6 +701,27 @@ color: rgba(255, 255, 255, 0.7);
   width: 100%;
   height: 100%;
   position: relative;
+}
+
+.discover-card {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.discover-commercant {
+  background-image: url("images/commercant.jpg");
+  background-position: 40% center;
+}
+
+.discover-livreur {
+  background-image: url("images/livreur.jpg");
+  background-position: 90% center;
+}
+
+.discover-vtc {
+  background-image: url("images/vtc.jpg");
+  background-position: center 20%;
 }
 
 .discover-card img {
@@ -988,149 +847,7 @@ background: linear-gradient(190.23deg, rgba(0, 0, 0, 0) 7.07%, rgba(20, 20, 20, 
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
-  /* FOOTER */
-
-.footer {
-    width: 100%;
-    /* background: #f5f5f5; */
-    padding: 40px 0;
-    /* background: rgba(255, 255, 255, 255); */
-  }
-  
-  .footer-container {
-    max-width: 1228px;   /* même largeur que tes autres sections */
-    width: 100%;
-    margin: 0 auto;      /* centre le container */
-    padding: 0 20px;     /* petit padding pour éviter de coller les bords */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* LEFT */
-  .footer-left {
-  
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 0px;
-gap: 24px;
-/* width: 336px; */
-height: 96px;
-
-
-/* À l'intérieur de l'auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-  }
-  
-.footer-left img {
-  width: 32px;
-  }
-  
-.footer-left p {
-  font-family: 'SF Pro Display',Sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 16px;
-  display: flex;
-  align-items: center;
-  color: #000000;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  }
-  
-  /* RIGHT */
-.footer-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  padding: 0px;
-  gap: 40px;
-  width: 274px;
-  height: 80px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  }
-  
-.footer-socials {
-  display: flex;
-  gap: 16px;
-  }
-  
-.footer-socials a {
-  text-decoration: none;
-  color: #FFFFFF;
-  font-size: 14px;
-  }
-
-.footer-socials a img{
-  width: 24px;
-  height: 24px;
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
-  }
-  
-.footer-links {
-  display: flex;
-  gap: 20px;
-  color: #FFFFFF;
-  }
-  
-.footer-links a {
-  text-decoration: none;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 16px;
-  display: flex;
-  align-items: center;
-  color: #606060;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  }
-  
-.footer-links a:hover {
-  color: black;
-  }
-  
-.logo_footer{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 12px 16px;
-  gap: 10px;
-  background: #000000;
-  border-radius: 16px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  }
-
-.logo_footer img{
-  width: 23.72px;
-  height: 32px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  }
-
-.copy{
-  margin-left: 5px;
-  margin-right: 5px;
-  font-weight:bold; 
-  }
+ 
 
 
 

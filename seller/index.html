@@ -1,31 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seller</title>
+    <title>Commerçants</title>
     <link rel="stylesheet" href="seller.css">
 </head>
 <body>
     <!-- section navbar -->
     <header class="hero">
-      <img src="../images/seller_fond1.jpg" class="hero-img" alt="">
+      <!-- <img src="../images/seller_fond1.jpg" class="hero-img" alt=""> -->
       <div class="hero-overlay"></div>
   
-      <nav class="navbar">
-        <div class="menu">
-            <div class="logo">
-                <img src="../images/Vector.png" alt="logo">
-                <a href="../home.html"><img src="../images/zuri_name.png" alt="logo"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="../seller/seller.html" class="commerçant">Commerçants</a></li>
-                <li><a href="../deliver/deliver.html" class="livreur">Livreurs</a></li>
-                <li><a href="../vtc/vtc.html" class="vtc">VTC</a></li>
-            </ul>
-            <a href="#" class="inscription">S'inscrire</a>
-        </div>
-    </nav>
+      <div id="header"></div>
 
    
     
@@ -43,9 +30,10 @@
       <a href="#" class="inscription2">S'inscrire</a>
     </div>
 
-    
     </header>
 
+    <main>
+    <!--SECTION ACTIVITES  -->
     <section class="activites">
 
       <!-- SECTION 1 : image + texte + slider -->
@@ -55,7 +43,7 @@
     
           <div class="bloc-overlay"></div>
           <div class="content2">
-            <h3>Zéro soucis pour faire livrer vos colis.</h3>
+            <h2>Zéro soucis pour faire livrer vos colis.</h2>
             <p>Confiez-nous vos envois et suivez-les en temps réel. Rapide, fiable et sans stress.</p>
           </div>
         </div>
@@ -94,8 +82,6 @@
         <!-- Petits traits en bas -->
         <div class="dots">
             <span class="active"></span>
-            <span></span>
-            <span></span>
         </div>
         
         </div>
@@ -109,7 +95,7 @@
     
         <div class="bloc-2-left">
           <div class="card">
-            <h4>Découvrez Zuri</h4>
+            <h2>Découvrez Zuri</h2>
             <p class="para1">
               Zuri, plus qu’une simple app, un outil puissant pour fidéliser vos clients.
             </p>
@@ -145,22 +131,22 @@
     
         <div class="bloc-2-right">
           <div class="feature" data-screen="0">
-            <h5>Demande Permanente</h5>
+            <h3>Demande Permanente</h3>
             <p>En quelques clics un livreur est à votre porte pour récupérer et livrer vos colis.</p>
           </div>
     
           <div class="feature" data-screen="1">
-            <h5>Suivis des commandes</h5>
+            <h3>Suivis des commandes</h3>
             <p>Des qu’un colis est ramassé vous saurez exactement ou se trouve le livreur et vos clients également.</p>
           </div>
     
           <div class="feature" data-screen="2">
-            <h5>Flexibilité Totale</h5>
+            <h3>Flexibilité Totale</h3>
             <p>Comptabilisez facilement le nombre de clients livrés en deux clics seulement.</p>
           </div>
     
           <div class="feature" data-screen="3">
-            <h5>Paiement Facile</h5>
+            <h3>Paiement Facile</h3>
             <p>Payez ou faites payer par Mobile money ou en espèce vos livraisons</p>
           </div>
         </div>
@@ -204,63 +190,69 @@
       </div>
   </div>
 </section>
+
+
+
+
 <!-- section FAQ -->
 <section class="faq">
-<h2>Foire Aux Questions</h2>
+  <h2>Foire Aux Questions</h2>
 
-<div class="faq-item">
-<div class="faq-question">
-  Comment fonctionne Zuri pour les marchands ?
-<span class="faq-icon">+</span>
-</div>
-<div class="faq-reponse">
-<p>Zuri vous permet d’expédier facilement vos commandes. Une fois votre commande prête, vous la renseignez sur notre plateforme, et un coursier la prend en charge rapidement pour la 
-  livrer à votre client. Vous pouvez suivre chaque étape en temps réel.</p>
-</div>
-</div>
+  <ul class="faq-list">
+      <li class="faq-item">
+          <div class="faq-question">
+            Comment fonctionne Zuri pour les marchands ?
+              <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-reponse">
+              <p>Zuri vous permet d’expédier facilement vos commandes. Une fois votre commande prête, vous la renseignez sur notre plateforme, et un coursier la prend en charge rapidement pour la 
+                livrer à votre client. Vous pouvez suivre chaque étape en temps réel.</p>
+          </div>
+      </li>
 
-<div class="faq-item">
-<div class="faq-question">
-  Quels types de livraisons puis-je proposer avec Zuri ?
-<span class="faq-icon">+</span>
-</div>
-<div class="faq-reponse">
-<p>Zuri offre plusieurs options : livraison express, standard et programmée. Vous choisissez la solution qui convient 
-  le mieux à votre activité et à vos clients.</p>
-</div>
-</div>
+      <li class="faq-item">
+          <div class="faq-question">
+            Quels types de livraisons puis-je proposer avec Zuri ?
+              <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-reponse">
+              <p>Zuri offre plusieurs options : livraison express, standard et programmée. Vous choisissez la solution qui convient 
+                le mieux à votre activité et à vos clients.</p>
+          </div>
+      </li>
 
-<div class="faq-item">
-<div class="faq-question">
-  Combien coûte l’utilisation de Zuri ?
-<span class="faq-icon">+</span>
-</div>
-<div class="faq-reponse">
-<p>Le prix est établi en fonction de la zone de livraison.</p>
-</div>
-</div>
+      <li class="faq-item">
+          <div class="faq-question">
+            Combien coûte l’utilisation de Zuri ?
+              <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-reponse">
+              <p>Le prix est établi en fonction de la zone de livraison.</p>
+          </div>
+      </li>
 
-<div class="faq-item">
-<div class="faq-question">
-  Comment mes clients peuvent-ils suivre leur livraison ?
-<span class="faq-icon">+</span>
-</div>
-<div class="faq-reponse">
-<p>Dès que leur commande est prise en charge, vos clients reçoivent un lien de suivi en temps réel sur leur applications clients. 
-  Ils savent à tout moment où se trouve leur colis, sans avoir besoin de vous déranger.</p>
-</div>
-</div>
+      <li class="faq-item">
+          <div class="faq-question">
+            Comment mes clients peuvent-ils suivre leur livraison ?
+              <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-reponse">
+              <p>Dès que leur commande est prise en charge, vos clients reçoivent un lien de suivi en temps réel sur leur applications clients. 
+                Ils savent à tout moment où se trouve leur colis, sans avoir besoin de vous déranger.</p>
+          </div>
+      </li>
 
-<div class="faq-item">
-<div class="faq-question">
-  Que faire en cas de problème avec une livraison ?
-<span class="faq-icon">+</span>
-</div>
-<div class="faq-reponse">
-<p>Notre support est disponible 7j/7 pour vous aider en cas de souci. Vous pouvez nous contacter via 
-  l’application ou par téléphone pour une assistance rapide et efficace.</p>
-</div>
-</div>
+      <li class="faq-item">
+          <div class="faq-question">
+            Que faire en cas de problème avec une livraison ?
+              <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-reponse">
+              <p>Notre support est disponible 7j/7 pour vous aider en cas de souci. Vous pouvez nous contacter via 
+                l’application ou par téléphone pour une assistance rapide et efficace.</p>
+          </div>
+      </li>
+  </ul>
 </section>
 
 <!-- discover -->
@@ -277,62 +269,36 @@
       </div>
     </div> -->
 
-    <div class="discover-card">
-      <div id="imagelivreur"><img src="../images/livreur.jpg" alt=""></div>
+    <div class="discover-card discover-livreur">
+      <!-- <div id="imagelivreur"><img src="../images/livreur.jpg" alt=""></div> -->
       <div class="discover-overlay"></div>
       <div class="discover-content">
         <h3>Découvrez <br> Zuri, pour les</h3>
-        <a href="../deliver/deliver.html">Livreurs →</a>
+        <a href="../deliver/">Livreurs →</a>
       </div>
     </div>
 
-    <div class="discover-card">
-      <div id="imagevtc"><img src="../images/vtc.jpg" alt=""></div>
+    <div class="discover-card discover-vtc">
+      <!-- <div id="imagevtc"><img src="../images/vtc.jpg" alt=""></div> -->
       <div class="discover-overlay"></div>
       <div class="discover-content">
         <h3>Découvrez<br> Zuri, pour les</h3>
-        <a href="../vtc/vtc.html">VTC →</a>
+        <a href="../vtc/">VTC →</a>
       </div>
     </div>
 
   </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
-<footer class="footer">
-<div class="footer-container">
-
-<div class="footer-left">
-  <div class="logo_footer">
-    <img src="../images/Vector.png" alt="logo">
-  </div>
-  <p>
-    Copyright © Zuri 2025 <span class="copy">|</span>
-    powered by <span class="copy">KillinGiants</span>
-  </p>
-</div>
-
-<div class="footer-right">
-  <div class="footer-socials">
-    <a href="#"><img src="../images/x.png" alt="logo x"></a>
-    <a href="#"><img src="../images/instagram.png" alt="logo instagram"></a>
-    <a href="#"><img src="../images/tiktok.png" alt="logo tiktok"></a>
-    <a href="#"><img src="../images/youtube.png" alt="logo youtube"></a>
-  </div>
-
-  <div class="footer-links">
-    <a href="#">Cookies</a>
-    <a href="#">Politique de confidentialité</a>
-  </div>
-</div>
-
-</div>
-</footer>
+<div id="footer"></div>
 
 <button id="scrollBtn">↓</button>
 <script src="../home.js"></script>
   
-      
+<script src="../components/include.js"></script>
       
 </body>
 </html>

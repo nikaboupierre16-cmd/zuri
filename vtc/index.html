@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,23 +9,10 @@
 <body>
     <!-- section navbar -->
     <header class="hero">
-      <img src="../images/vtc_fond1.jpg" class="hero-img" alt="">
+      <!-- <img src="../images/vtc_fond1.jpg" class="hero-img" alt=""> -->
       <div class="hero-overlay"></div>
   
-      <nav class="navbar">
-        <div class="menu">
-            <div class="logo">
-                <img src="../images/Vector.png" alt="logo">
-                <a href="../home.html"><img src="../images/zuri_name.png" alt="logo"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="../seller/seller.html" class="commerçant">Commerçants</a></li>
-                <li><a href="../deliver/deliver.html" class="livreur">Livreurs</a></li>
-                <li><a href="../vtc/vtc.html" class="vtc">VTC</a></li>
-            </ul>
-            <a href="#" class="inscription">S'inscrire</a>
-        </div>
-    </nav>
+      <div id="header"></div>
 
    
     
@@ -45,7 +32,7 @@
 
     
     </header>
-
+<main>
     <section class="activites">
 
       <!-- SECTION 1 : image + texte + slider -->
@@ -206,70 +193,86 @@
       </div>
   </div>
 </section>
+
+
+
 <!-- section FAQ -->
 <section class="faq">
-<h2>Foire Aux Questions</h2>
+  <h2>Foire Aux Questions</h2>
 
-<div class="faq-item">
-<div class="faq-question">
-  Comment fonctionne Zuri pour les chauffeurs VTC ?
-<span class="faq-icon">+</span>
-</div>
-<div class="faq-reponse">
-<p>Zuri est une plateforme qui vous connecte directement aux passagers. Une fois inscrit, vous recevez des demandes de
-   course avec le prix proposé par le client. Vous êtes libre d’accepter ou de refuser chaque course en fonction de vos préférences.</p>
-</div>
-</div>
+  <ul class="faq-list">
+      <li class="faq-item">
+          <div class="faq-question">
+            Comment fonctionne Zuri pour les chauffeurs VTC ?
+              <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-reponse">
+              <p>Zuri est une plateforme qui vous connecte directement aux passagers. Une fois inscrit, vous recevez des demandes de
+                course avec le prix proposé par le client. Vous êtes libre d’accepter ou de refuser chaque course en fonction de vos préférences.</p>
+          </div>
+      </li>
 
-<div class="faq-item">
-<div class="faq-question">
-  Quels sont les avantages de Zuri par rapport aux autres plateformes ?
-<span class="faq-icon">+</span>
-</div>
-<div class="faq-reponse">
-<p>Zuri offre plusieurs avantages clés :
+      <li class="faq-item">
+          <div class="faq-question">
+            Quels sont les avantages de Zuri par rapport aux autres plateformes ?
+              <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-reponse">
+              <p>Zuri offre plusieurs avantages clés :
 
-  Commission réduite à 12 % seulement, et 10 % le premier mois après inscription.
-  Flexibilité totale : roulez quand vous voulez, désactivez-vous en un clic.
-  Choix des courses : acceptez uniquement celles qui vous intéressent.
-  Optimisation des trajets pour réduire les retours à vide et augmenter vos gains.
-  </p>
-</div>
-</div>
+                Commission réduite à 12 % seulement, et 10 % le premier mois après inscription.
+                Flexibilité totale : roulez quand vous voulez, désactivez-vous en un clic.
+                Choix des courses : acceptez uniquement celles qui vous intéressent.
+                Optimisation des trajets pour réduire les retours à vide et augmenter vos gains.</p>
+          </div>
+      </li>
 
-<div class="faq-item">
-<div class="faq-question">
-  Combien puis-je gagner avec Zuri ?
-<span class="faq-icon">+</span>
-</div>
-<div class="faq-reponse">
-<p>Vos revenus dépendent du nombre de courses effectuées. Grâce à notre faible commission de 12 %, vous conservez une grande part de vos gains.
-   De plus si vous inscrivez vous avant le lancement vous Zuri ne prendra que 10% de commission pendant un mois sur toutes vos courses.</p>
-</div>
-</div>
+      <li class="faq-item">
+          <div class="faq-question">
+            Combien puis-je gagner avec Zuri ?
+              <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-reponse">
+              <p>Vos revenus dépendent du nombre de courses effectuées. Grâce à notre faible commission de 12 %, vous conservez une grande part de vos gains.
+                De plus si vous inscrivez vous avant le lancement vous Zuri ne prendra que 10% de commission pendant un mois sur toutes vos courses.</p>
+          </div>
+      </li>
 
-<div class="faq-item">
-<div class="faq-question">
-  Quels types de véhicules puis-je utiliser ?
-<span class="faq-icon">+</span>
-</div>
-<div class="faq-reponse">
-<p>Vous pouvez livrer avec une moto un scooter ou une voiture, selon vos préférences et la taille des colis à transporter. Peu importe votre moyen de transport, Zuri vous permet de trouver des courses adaptées à votre véhicule. Cependant pour 
-  les véhicules à deux roues, il faut impérativement posséder un casque et proposez un casque supplémentaire pour votre client(e).</p>
-</div>
-</div>
+      <li class="faq-item">
+          <div class="faq-question">
+            Quels types de véhicules puis-je utiliser ?
+              <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-reponse">
+              <p>Vous pouvez livrer avec une moto un scooter ou une voiture, selon vos préférences et la taille des colis à transporter. Peu importe votre moyen de transport, Zuri vous permet de trouver des courses adaptées à votre véhicule. Cependant pour 
+                les véhicules à deux roues, il faut impérativement posséder un casque et proposez un casque supplémentaire pour votre client(e).</p>
+          </div>
+      </li>
 
-<div class="faq-item">
-<div class="faq-question">
-  Quand et comment suis-je payé ?
-<span class="faq-icon">+</span>
-</div>
-<div class="faq-reponse">
-<p>Par mobile money vous recez vos gains instantanément, par payement direct vous devez reversez la part de Zuri chaque soir. Vous avez accès à un suivi 
-  détaillé de vos revenus via l’application, vous permettant de gérer facilement votre activité et d’optimiser vos gains.</p>
-</div>
-</div>
+      <li class="faq-item">
+          <div class="faq-question">
+            Quand et comment suis-je payé ?
+              <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-reponse">
+              <p>Par mobile money vous recez vos gains instantanément, par payement direct vous devez reversez la part de Zuri chaque soir. Vous avez accès à un suivi 
+                détaillé de vos revenus via l’application, vous permettant de gérer facilement votre activité et d’optimiser vos gains.</p>
+          </div>
+      </li>
+  </ul>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- discover -->
 
@@ -277,21 +280,21 @@
   <div class="discover-container">
 
 
-    <div class="discover-card">
-        <div id="imagelivreur"><img src="../images/livreur.jpg" alt=""></div>
+    <div class="discover-card discover-livreur">
+        <!-- <div id="imagelivreur"><img src="../images/livreur.jpg" alt=""></div> -->
         <div class="discover-overlay"></div>
         <div class="discover-content">
           <h3>Découvrez <br> Zuri, pour les</h3>
-          <a href="../deliver/deliver.html" class="neutre">Livreurs →</a>
+          <a href="../deliver/" class="neutre">Livreurs →</a>
         </div>
       </div>
 
-    <div class="discover-card">
-      <div id="imagecommercant"><img src="../images/commercant.jpg" alt=""></div>
+    <div class="discover-card discover-commercant">
+      <!-- <div id="imagecommercant"><img src="../images/commercant.jpg" alt=""></div> -->
       <div class="discover-overlay"></div>
       <div class="discover-content">
         <h3>Découvrez Zuri,<br>pour les</h3>
-        <a href="../seller/seller.html" class="neutre1">Commerçants →</a>
+        <a href="../seller/" class="neutre1">Commerçants →</a>
       </div>
     </div>
 
@@ -308,40 +311,13 @@
 
   </div>
 </section>
-
+</main>
 <!-- FOOTER -->
-<footer class="footer">
-<div class="footer-container">
-
-<div class="footer-left">
-  <div class="logo_footer">
-    <img src="../images/Vector.png" alt="logo">
-  </div>
-  <p>
-    Copyright © Zuri 2025 <span class="copy">|</span>
-    powered by <span class="copy">KillinGiants</span>
-  </p>
-</div>
-
-<div class="footer-right">
-  <div class="footer-socials">
-    <a href="#"><img src="../images/x.png" alt="logo x"></a>
-    <a href="#"><img src="../images/instagram.png" alt="logo instagram"></a>
-    <a href="#"><img src="../images/tiktok.png" alt="logo tiktok"></a>
-    <a href="#"><img src="../images/youtube.png" alt="logo youtube"></a>
-  </div>
-
-  <div class="footer-links">
-    <a href="#">Cookies</a>
-    <a href="#">Politique de confidentialité</a>
-  </div>
-</div>
-
-</div>
-</footer>
+<div id="footer"></div>
 
 <button id="scrollBtn">↓</button>
 <script src="../home.js"></script>
+<script src="../components/include.js"></script>
   
       
       

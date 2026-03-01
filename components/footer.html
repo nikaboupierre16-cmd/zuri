@@ -1,0 +1,212 @@
+<!-- FOOTER COMPONENT -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <div class="logo_footer">
+                <img src="images/Vector.png" alt="logo">
+            </div>
+            <p>
+                Copyright © Zuri 2025 <span class="copy">|</span>
+                powered by <span class="copy">KillinGiants</span>
+            </p>
+        </div>
+
+        <div class="footer-right">
+            <ul class="footer-socials">
+                <li><a href="#"><img src="images/x.png" alt="logo X"></a></li>
+                <li><a href="#"><img src="images/instagram.png" alt="logo Instagram"></a></li>
+                <li><a href="#"><img src="images/tiktok.png" alt="logo TikTok"></a></li>
+                <li><a href="#"><img src="images/youtube.png" alt="logo YouTube"></a></li>
+            </ul>
+
+            <div class="footer-links">
+                <a href="#">Cookies</a>
+                <a href="#">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+<style>
+    /* FOOTER COMPONENT STYLES */
+.footer {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.footer-container {
+    max-width: 1228px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.footer-left img {
+    width: 32px;
+}
+
+.footer-left p {
+    font-family: 'SF Pro Display', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 40px;
+    width: 274px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-socials a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.footer-socials a img {
+    width: 24px;
+    height: 24px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #606060;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.footer-links a:hover {
+    color: black;
+}
+
+.logo_footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 10px;
+    background: #000000;
+    border-radius: 16px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.logo_footer img {
+    width: 23.72px;
+    height: 32px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.copy {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-left {
+        align-items: center;
+    }
+    
+    .footer-right {
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
+    
+    .footer-links {
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .footer-left p {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        line-height: 24px;
+    }
+    
+    .footer-right {
+        gap: 30px;
+    }
+    
+    .footer-links a {
+        font-size: 14px;
+    }
+}
+</style>
