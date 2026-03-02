@@ -1,21 +1,4 @@
-<!-- HEADER COMPONENT -->
-<header class="header">
-    <nav class="navbar">
-        <div class="menu">
-            <div class="logo">
-                <img src="images/Vector.png" alt="logo Zuri">
-                <a href="index.html"><img src="images/zuri_name.png" alt="Zuri"></a>
-            </div>
-            <ul>
-                <li><a href="seller/" class="commerçant">Commerçants</a></li>
-                <li><a href="deliver/" class="livreur">Livreurs</a></li>
-                <li><a href="vtc/" class="vtc">VTC</a></li>
-            </ul>
-            <a href="#" class="inscription">S'inscrire</a>
-        </div>
-    </nav>
-</header>
-<style>
+
     /* HEADER COMPONENT STYLES */
 .navbar {
     display: flex;
@@ -103,6 +86,64 @@ li {
     margin-right: 12px;
 }
 
+#header {
+    position: relative;
+    z-index: 1000;
+  }
+  
+  #header .navbar {
+    background: transparent !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+  }
+  
+  #header .commerçant,
+  #header .livreur,
+  #header .vtc {
+    color: #FFFFFF !important;
+  }
+  
+  #header .inscription {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    mix-blend-mode: normal !important;
+  }
+  
+  #header .logo img {
+    filter: brightness(0) invert(1); 
+  }
+  
+  
+  #header .logo a:last-child img {
+    filter: none; 
+  }
+  
+  /* Responsive mobile */
+  @media screen and (max-width: 768px) {
+    #header .menu ul {
+        background: #ffffff !important;
+    }
+    
+    #header .menu ul li a {
+        color: #000000 !important;
+    }
+    
+    #header .logo img {
+        filter: none; 
+    }
+  }
+  
+  /* Responsive tablette */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    #header .navbar {
+        background: transparent !important;
+        backdrop-filter: none !important;
+    }
+  }
+
+  
 /* Hamburger menu (mobile) */
 .hamburger {
     display: none;
@@ -223,4 +264,3 @@ li {
         margin-right: 35px;
     }
 }
-</style>

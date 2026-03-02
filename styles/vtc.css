@@ -50,66 +50,6 @@ a {
     height: 100%;
 }
 
-/* ===== CORRECTION HEADER POUR SELLER ===== */
-/* S'assurer que le header est au-dessus de tout */
-#header {
-  position: relative;
-  z-index: 1000;
-}
-
-#header .navbar {
-  background: transparent !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-}
-
-#header .commerçant,
-#header .livreur,
-#header .vtc {
-  color: #FFFFFF !important;
-}
-
-#header .inscription {
-  background: #FFFFFF !important;
-  color: #000000 !important;
-  mix-blend-mode: normal !important;
-}
-
-/* Ajuster le logo si besoin */
-#header .logo img {
-  filter: brightness(0) invert(1); /* Rend le logo blanc si nécessaire */
-}
-
-/* Pour le logo texte, ne pas l'inverser */
-#header .logo a:last-child img {
-  filter: none; /* Garde le logo texte normal */
-}
-
-/* Responsive mobile */
-@media screen and (max-width: 768px) {
-  #header .menu ul {
-      background: #ffffff !important;
-  }
-  
-  #header .menu ul li a {
-      color: #000000 !important;
-  }
-  
-  #header .logo img {
-      filter: none; /* Sur mobile, garder les logos normaux */
-  }
-}
-
-/* Responsive tablette */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  #header .navbar {
-      background: transparent !important;
-      backdrop-filter: none !important;
-  }
-}
-
 /* ===== CARD DROITE (TEXTE SUR HERO) ===== */
 .cardright {
     position: relative;
@@ -771,6 +711,40 @@ padding: 120px 0;
     width: 100%;
     height: 100%;
   }
+
+  .mosaic-item {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .item1 {
+    background-image: url("../images/img1.jpg");
+    background-position: 80% center;
+    transform: scale(1.1);
+  }
+  
+  .item2 {
+    background-image: url("../images/img2.jpg");
+    background-position: 40% center;
+    transform: scaleX(-1) scale(1.0);
+  }
+  
+  .item3 {
+    background-image: url("../images/img3.jpg");
+    background-position: 80% center;
+  }
+  
+  .item4 {
+    background-image: url("../images/img4.png");
+    background-position: 40% center;
+  }
+  
+  .item5 {
+    background-image: url("../images/img5.jpg");
+    background-position: 60% center;
+  }
   
   .mosaic-grid {
     display: grid;
@@ -824,16 +798,20 @@ padding: 120px 0;
 
   .screen2 {
     position: absolute;
-    width: 82px;  /* À ajuster selon la taille du téléphone dans l'image */
-    height: 170px; /* À ajuster selon la taille du téléphone dans l'image */
+    /* width: 82px;  
+    height: 170px;  */
+    width: 70px;  
+    height: 138px;
     background: url(../images/fond_phone.png);
     background-size: cover;
     border-radius: 10px; /* Coins arrondis comme un écran de téléphone */
     /* Position à ajuster précisément sur le téléphone */
-    top: 246px;    /* À ajuster */
-    left: 25px;   /* À ajuster */
+    /* top: 246px;    
+    left: 25px;    */
+    top: 218px;    
+    left: 34px; 
     /* Si besoin de rotation */
-    /* transform: rotate(5deg); */    
+    transform: rotate(1deg);    
     z-index: 1;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     
@@ -1147,13 +1125,9 @@ padding: 120px 0;
     z-index: 2;
   
     display: flex;
- 
-
-
-
   }
   
-  .discover-content h3 {
+.discover-content h3 {
     font-family: 'SF Pro Display', sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -1163,14 +1137,9 @@ padding: 120px 0;
     margin-bottom: 0px;
     color: #FFFFFF;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
   
-  
-
-
-    
-  }
-  
-  .neutre1{
+.neutre1{
     display: inline-block;
     font-family: 'SF Pro Display', sans-serif;
     font-style: normal;
@@ -1186,16 +1155,11 @@ padding: 120px 0;
     backdrop-filter: blur(5px);
     transition: all 0.3s ease;
     margin-left: 16%;
-    /* margin-left: 35%; */
-
     align-self: flex-start;
     margin-top: 59px;
+}
 
-
-
-  }
-
-  .neutre{
+.neutre{
     display: inline-block;
     font-family: 'SF Pro Display', sans-serif;
     font-style: normal;
@@ -1214,23 +1178,20 @@ padding: 120px 0;
 
     align-self: flex-start;
     margin-top: 59px;
-  }
+}
   
-  .discover-content a:hover {
+.discover-content a:hover {
     background: rgba(255, 255, 255, 0.25);
     border-color: rgba(255, 255, 255, 0.5);
     transform: translateY(-2px);
-  }
+}
   
   /* Styles spécifiques pour chaque image (optionnel) */
   #imagecommercant img {
-    /* object-position: center */
     object-position: 40% center;
   }
   
   #imagelivreur img {
-    /* object-position: center 40%;
-     */
      object-position: 90% center;
   }
   
@@ -1238,93 +1199,60 @@ padding: 120px 0;
     object-position: center 20%;
   }
   
-   
-  
-  
   /* Pour un effet "glassmorphisme" sur les badges (si présents dans Figma) */
-  .discover-badge {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    padding: 6px 12px;
-    border-radius: 30px;
-    color: white;
-    font-size: 14px;
-    z-index: 2;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
+.discover-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 6px 12px;
+  border-radius: 30px;
+  color: white;
+  font-size: 14px;
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
   
   /* Animation au survol plus fluide */
-  .discover-card {
-    transition: all 0.3s ease;
-  }
+.discover-card {
+  transition: all 0.3s ease;
+}
   
-  .discover-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-  }
+.discover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
   
-
-
-    #scrollBtn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: none;
-      background: black;
-      color: white;
-      font-size: 22px;
-      cursor: pointer;
-      z-index: 999;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-    }
+#scrollBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: black;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  }
     
-    #scrollBtn:hover {
-      transform: scale(1.1);
-    }
+#scrollBtn:hover {
+  transform: scale(1.1);
+  }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       /* ===== RESPONSIVE MOBILE (ajouté sans toucher au PC) ===== */
+       /* ===== RESPONSIVE MOBILE ===== */
    @media screen and (max-width: 768px) {
-    /* Navbar mobile */
+  
     .navbar {
         padding: 10px 16px;
         height: auto;
         position: fixed;
-        /* background: white; */
         background: rgba(255, 255, 255, 255);
         top: 0;
         left: 0;
@@ -1342,14 +1270,7 @@ padding: 120px 0;
       width: auto; 
     
     }
-    /* ul {
-        order: 3;
-        width: 100%;
-        justify-content: center;
-        gap: 20px;
-        height: auto;
-    } */
-
+  
     .menu > ul {
       order: 3;
       width: 100%;
@@ -1364,8 +1285,6 @@ padding: 120px 0;
         width: auto;
         padding: 6px 20px;
     }
-
-    
 
     /* Activités */
     .activites {
@@ -1384,7 +1303,6 @@ padding: 120px 0;
     }
     .content {
         width: 100%;
-        /* height: auto; */
         height:65%;
         padding: 30px 20px;
     }
@@ -1430,12 +1348,12 @@ padding: 120px 0;
         font-size: 32px;
         line-height: 40px;
     }
-    .feature h4 { font-size: 20px; }
-    .feature p { font-size: 16px; }
-    
-
-   
-
+    .feature h4 { 
+      font-size: 20px; 
+    }
+    .feature p { 
+      font-size: 16px; 
+    }
     /* FAQ */
     .faq {
         width: 100%;
@@ -1513,16 +1431,16 @@ padding: 120px 0;
     .discover-content a { font-size: 18px; }
 }
 
-/* CORRECTION URGENTE POUR MOBILE - Images de fond des activités */
+/* POUR MOBILE - Images de fond des activités */
 @media screen and (max-width: 768px) {
-  /* Correction pour les cartes activités */
+
   .card.left {
       background-image: url('images/marchand.jpg') !important;
       background-size: cover !important;
       background-position: center !important;
       display: block !important;
   }
-  
+
   .card.right {
       background-image: url('images/marchand.jpg') !important;
       background-size: cover !important;
@@ -1530,7 +1448,6 @@ padding: 120px 0;
       display: block !important;
   }
   
-  /* Correction pour les logos */
   .logo img[src="images/Vector.png"],
   .logo img[src="images/zuri_name.png"] {
       display: inline-block !important;
@@ -1538,7 +1455,6 @@ padding: 120px 0;
       opacity: 1 !important;
   }
   
-  /* Force l'affichage des conteneurs */
   .card {
       opacity: 1 !important;
       min-height: 400px !important;
@@ -1547,16 +1463,6 @@ padding: 120px 0;
 
 /* CORRECTION COMPLÈTE POUR MOBILE */
 @media screen and (max-width: 768px) {
-  
-
-  
-  /* Alternative : si "content" ne marche pas, décommentez ceci :
-  .logo a img[src="images/zuri_name.png"] {
-      src: url('images/zuri_name.png') !important;
-  }
-  */
-  
-  /* 2. CORRECTION DE LA CARTE ACTIVITÉS (une seule image coupée) */
   .activites .card {
       background-image: url('images/marchand.jpg') !important;
       background-size: 200% auto !important; /* Garde le même effet de coupure */
@@ -1567,7 +1473,6 @@ padding: 120px 0;
   }
   
   .activites .card.left {
-      /* background-position: left bottom !important; */
       background-position: left 55% !important;
   }
   
@@ -1575,16 +1480,10 @@ padding: 120px 0;
       background-position: right 55% !important;
   }
   
-  
-  
-  /* 4. Correction des images dans la grille mosaic */
   .mosaic-grid img {
       src: attr(src) !important; 
   }
 }
-
-
-
 
 /* BOUTON HAMBURGER (créé en JS) */
 .hamburger {
@@ -1601,10 +1500,6 @@ padding: 120px 0;
     position: relative;
   }
 
-
-
-  
-
   .menu ul li {
     padding: 15px 20px;
     border-bottom: 1px solid #eee;
@@ -1615,8 +1510,6 @@ padding: 120px 0;
     color: black;
     font-size: 16px;
   }
-
- 
 
   .hamburger {
     display: block;
@@ -1629,52 +1522,36 @@ padding: 120px 0;
     justify-content: space-between;
   }
 
-  .logo {
-    /* margin: 0 auto; */
-  }
-
-  /* agrandir le logo */
   .logo img:first-child {
-    /* width: 28px; */
     height: 30px;
     
   }
 
   .logo img:last-child {
-    /* height: 22px; */
     height: 22px;
     
   }
 }
 
-
-/* NAVBAR AU-DESSUS DE TOUT */
+/* NAVBAR */
 .navbar {
   z-index: 1000;
 }
 
-/* MENU MOBILE AU-DESSUS DES CARTES */
+/* MENU MOBILE */
 @media screen and (max-width: 768px) {
 
   .menu ul {
     z-index: 999;
   }
 
-  /* Optionnel mais recommandé */
   .activites,
   .card {
     position: relative;
     z-index: 1;
   }
 
-
- 
 }
-
-
-
-
-
 
 @media screen and (max-width: 768px) {
   
@@ -1696,16 +1573,8 @@ padding: 120px 0;
   }
 }
 
-
-
-
-
 /* MENU MOBILE OFFCANVAS */
 @media screen and (max-width: 768px) {
-
-
-
-
 
     /* HERO MOSAIC */
     @media screen and (max-width: 768px) {
@@ -1740,50 +1609,32 @@ padding: 120px 0;
       }
     
       .cta-button {
-        /* margin: 10px 0 0 0;  */
         padding: 8px 18px;
         font-size: 12px;
-      }
-    
+      }      
+}
 
 
-      
-    }
+@media screen and (max-width: 768px) {
 
 
-
-    @media screen and (max-width: 768px) {
-
-
-      .mosaic-grid {
+  .mosaic-grid {
         grid-template-columns: 0.4fr 0.8fr 0.8fr 0.6fr 0.2fr;
       }
 
-      .mosaic-grid img:nth-child(1) {
+  .mosaic-grid img:nth-child(1) {
         object-position: 80% center; /* gauche/droite */
-        /* transform: scaleX(1.1); */
-
       }
-    
-      .mosaic-grid img:nth-child(2) {
-        /* object-position: 30% center; */
-      }
-    
-      .mosaic-grid img:nth-child(3) {
-        /* object-position: center top;  */
-      }
-    
-      .mosaic-grid img:nth-child(4) {
+  
+  .mosaic-grid img:nth-child(4) {
         object-position: center 70%;
       }
     
-      .mosaic-grid img:nth-child(5) {
+  .mosaic-grid img:nth-child(5) {
         object-position: 60% center;
       }
     
     }
-
-
 
 @media screen and (max-width: 768px) {
   
@@ -1814,44 +1665,19 @@ padding: 120px 0;
   order: 1;
   flex-grow: 0;
   text-decoration: none;
-  /* margin-left: 53%; */
   color: black;
   font-family: 'SF Pro Display', sans-serif;
   margin-right: 12px;
-
-
-
-  /* S’inscrire */
-
-/* width: 58px;
-height: 17px; */
-
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 17px;
-/* identique à la hauteur de la zone de texte */
-
-color: #000000;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
 
 
 }
 
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1900,8 +1726,8 @@ color: #000000;
   }
 
   .menu ul {
-    justify-content: flex-start;  /* important */
-    align-items: flex-start;      /* important */
+    justify-content: flex-start; 
+    align-items: flex-start;      
 }
 
   /* Hamburger */
@@ -1938,20 +1764,16 @@ color: #000000;
     pointer-events: auto;
   }
 
-
   .menu ul {
-    height: 100vh;      /* force la bonne hauteur */
-    gap: 0;             /* enlève espace horizontal */
+    height: 100vh;   
+    gap: 0;           
   }
 
-
   ul {
-    height: auto;   /* remplace le height:17px */
+    height: auto;  
   }
 
 }
-
-
 
 @media screen and (max-width: 768px) {
 
@@ -1975,19 +1797,6 @@ color: #000000;
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* ===== RESPONSIVE TABLETTE (768px - 1024px) ===== */
@@ -2327,12 +2136,11 @@ color: #000000;
   }
 }
 
-/* ===== CORRECTIONS SPÉCIFIQUES TABLETTE ===== */
+/* =====TABLETTE ===== */
 
-/* Correction menu tablette */
+/* menu tablette */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   
-  /* On garde le menu horizontal normal (pas de hamburger) */
   .hamburger {
       display: none !important;
   }
@@ -2360,7 +2168,7 @@ color: #000000;
   }
 }
 
-/* Correction images activités tablette */
+/* images activités tablette */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .card.left {
       background-position-x: left;
@@ -2373,7 +2181,7 @@ color: #000000;
   }
 }
 
-/* Correction écran téléphone expérience */
+/* écran téléphone expérience */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .experience-right {
       align-items: center;
@@ -2388,7 +2196,7 @@ color: #000000;
   }
 }
 
-/* Correction grille mosaic */
+/*grille mosaic */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .mosaic-grid img:nth-child(1) {
       object-position: 75% center;
@@ -2411,7 +2219,7 @@ color: #000000;
   }
 }
 
-/* Ajustement espacement contenu mosaic */
+/*  contenu mosaic */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .mosaic-content {
       padding: 0 40px;
@@ -2431,7 +2239,7 @@ color: #000000;
   }
 }
 
-/* Correction footer tablette */
+/* footer tablette */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .footer-left {
       gap: 15px;

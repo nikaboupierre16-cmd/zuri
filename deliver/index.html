@@ -4,17 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livreur</title>
-    <link rel="stylesheet" href="deliver.css">
+    <link rel="stylesheet" href="../styles/deliver.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
 </head>
 <body>
     <!-- section navbar -->
-    <header class="hero">
-      <!-- <img src="../images/deliver_fond1.jpg" class="hero-img" alt=""> -->
+    <header class="hero" id="header">
       <div class="hero-overlay"></div>
   
-      <div id="header"></div>
-
-   
+        <nav class="navbar">
+            <div class="menu">
+                <div class="logo">
+                    <img src="../images/Vector.png" alt="logo Zuri">
+                    <a href="../index.html"><img src="../images/zuri_name.png" alt="Zuri"></a>
+                </div>
+                <ul>
+                    <li><a href="../seller/" class="commerçant">Commerçants</a></li>
+                    <li><a href="../deliver/" class="livreur">Livreurs</a></li>
+                    <li><a href="../vtc/" class="vtc">VTC</a></li>
+                </ul>
+                <a href="#" class="inscription">S'inscrire</a>
+            </div>
+        </nav>
     
     <div class="cardright">
       <div class="content">
@@ -165,24 +177,18 @@
 
  <!-- hero-mosaic -->
 
-
  <section class="hero-mosaic">
   <div class="mosaic-container">
-      <div class="mosaic-grid">
-        
-          <!-- <img src="images/img1.jpg" alt=""> -->
-
-          <div class="image-with-phone">
-            <img src="../images/img1.jpg" alt="">
-            <!-- <div class="mosaic-overlay-img"></div> -->
-            <div class="screen2"></div>
-          </div>
-          
-          <img src="../images/img2.jpg" alt="">
-          <img src="../images/img3.jpg" alt="">
-          <img src="../images/img4.png" alt="">
-          <img src="../images/img5.jpg" alt="">
+    <div class="mosaic-grid">
+                  
+      <div class="mosaic-item item1">
+        <div class="screen2"></div>
       </div>
+      <div class="mosaic-item item2"></div>
+      <div class="mosaic-item item3"></div>
+      <div class="mosaic-item item4"></div>
+      <div class="mosaic-item item5"></div>
+</div>
 
       <div class="mosaic-overlay"></div>
 
@@ -197,7 +203,6 @@
       </div>
   </div>
 </section>
-
 
  <!-- section FAQ -->
  <section class="faq">
@@ -264,49 +269,60 @@
 
 <!-- discover -->
 
-<section class="discover">
-  <div class="discover-container">
+    <section class="discover">
+      <div class="discover-container">
 
-    <div class="discover-card discover-vtc">
-        <!-- <div id="imagevtc"><img src="../images/vtc.jpg" alt=""></div> -->
+        <div class="discover-card discover-vtc">
+          <div class="discover-overlay"></div>
+            <div class="discover-content">
+            <h3>Découvrez<br> Zuri, pour les</h3>
+            <a href="../vtc/" class="neutre">VTC →</a>
+          </div>
+      </div>
+
+      <div class="discover-card discover-commercant">
         <div class="discover-overlay"></div>
-        <div class="discover-content">
-          <h3>Découvrez<br> Zuri, pour les</h3>
-          <a href="../vtc/" class="neutre">VTC →</a>
+          <div class="discover-content">
+          <h3>Découvrez Zuri,<br>pour les</h3>
+          <a href="../seller/" class="neutre1">Commerçants →</a>
         </div>
       </div>
 
-    <div class="discover-card discover-commercant">
-      <!-- <div id="imagecommercant"><img src="../images/commercant.jpg" alt=""></div> -->
-      <div class="discover-overlay"></div>
-      <div class="discover-content">
-        <h3>Découvrez Zuri,<br>pour les</h3>
-        <a href="../seller/" class="neutre1">Commerçants →</a>
       </div>
-    </div>
+    </section>
+  </main>
 
-    <!-- <div class="discover-card">
-      <div id="imagelivreur"><img src="../images/livreur.jpg" alt=""></div>
-      <div class="discover-overlay"></div>
-      <div class="discover-content">
-        <h3>Découvrez <br> Zuri, pour les</h3>
-        <a href="#">Livreurs →</a>
-      </div>
-    </div> -->
-
-   
-
-  </div>
-</section>
-    </main>
 <!-- FOOTER -->
-<div id="footer"></div>
+<footer class="footer">
+  <div class="footer-container">
+      <div class="footer-left">
+          <div class="logo_footer">
+              <img src="../images/Vector.png" alt="logo">
+          </div>
+          <p>
+              Copyright © Zuri 2025 <span class="copy">|</span>
+              powered by <span class="copy">KillinGiants</span>
+          </p>
+      </div>
 
-<button id="scrollBtn">↓</button>
-<script src="../home.js"></script>
+      <div class="footer-right">
+          <ul class="footer-socials">
+              <li><a href="#"><img src="../images/x.png" alt="logo X"></a></li>
+              <li><a href="#"><img src="../images/instagram.png" alt="logo Instagram"></a></li>
+              <li><a href="#"><img src="../images/tiktok.png" alt="logo TikTok"></a></li>
+              <li><a href="#"><img src="../images/youtube.png" alt="logo YouTube"></a></li>
+          </ul>
 
-<script src="../components/include.js"></script>
-      
+          <div class="footer-links">
+              <a href="#">Cookies</a>
+              <a href="#">Politique de confidentialité</a>
+          </div>
+      </div>
+  </div>
+</footer>
+
+<button id="scrollBtn">↓</button> 
+<script src="../scripts/home.js"></script>     
       
 </body>
 </html>
