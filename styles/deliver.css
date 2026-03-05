@@ -1,46 +1,66 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* ===== RESET ===== */
+/* ======================================== */
+/* RESET & BASE STYLES                      */
+/* ======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    font-family: 'SF Pro Display', sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
-a {
-    text-decoration: none;
+
+html {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
-/* ===== HEADER/HERO ===== */
+/* ======================================== */
+/* NAVBAR                                   */
+/* ======================================== */
+
+.navbar {
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+/* ======================================== */
+/* HERO SECTION                             */
+/* ======================================== */
+
 .hero {
     position: relative;
     width: 100%;
     height: 1080px;
     overflow: hidden;
-}
-
-.faq-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
-
-.hero {
-  position: relative;
-  width: 100%;
-  height: 1080px;
-  overflow: hidden;
-
-  background-image: url("../images/deliver_fond1.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
+    background-image: url("../images/deliver_fond1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 .hero > * {
-  transform: matrix(-1, 0, 0, 1, 0, 0);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 .hero-overlay {
@@ -53,8 +73,6 @@ a {
     height: 100%;
 }
 
-
-/* ===== CARD DROITE (TEXTE SUR HERO) ===== */
 .cardright {
     position: relative;
     max-width: 1228px;
@@ -110,87 +128,102 @@ a {
     max-width: 706px;
 }
 
-
+.inscription {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    gap: 10px;
+    margin: 0 auto;
+    width: 106px;
+    height: 33px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    text-decoration: none;
+    color: black;
+    font-family: 'SF Pro Display', sans-serif;
+    margin-right: 12px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+}
 
 .inscription2 {
     background: #FFFFFF;
     border-radius: 15px;
-    padding: 8px 24px;
+    padding: 17px 24px;
     font-weight: 600;
     font-size: 14px;
     color: #000000;
     white-space: nowrap;
+    top: 420px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+    font-family: 'SF Pro Display', sans-serif;
+    width: 98px;
+    height: 17px;
+    font-style: normal;
+    line-height: 17px;
 }
 
-.inscription2{
-  top: 420px;
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 24px;
-  gap: 10px;
-  margin: 0 auto;
-  /* margin-left: 61%; */
-  font-family: 'SF Pro Display', sans-serif;
-  width: 58px;
-  height: 17px;
-  font-style: normal;
-  line-height: 17px;
-  
-  }
+/* ======================================== */
+/* ACTIVITES SECTION                        */
+/* ======================================== */
 
-/* ===== SECTION ACTIVITES ===== */
 .activites {
-  background: #F8F8F8;
-  padding: 120px 0;
-  width: 100%;
-  height: auto;
+    background: #F8F8F8;
+    padding: 120px 0;
+    width: 100%;
+    height: auto;
 }
 
 .bloc {
-  max-width: 1228px;
-  margin: 0 auto;
-  padding: 0 24px;
+    max-width: 1228px;
+    margin: 0 auto;
+    padding: 0 24px;
 }
 
-/* ===== BLOC 1 ===== */
+/* Bloc 1 */
 .bloc-1 {
-  display: flex;
-  align-items: center;   /* centre verticalement gauche + droite */
-  justify-content: space-between;
-  gap: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 120px;
 }
 
 .bloc-1-left {
-  position: relative;
-  width: 600px;
-  height: 600px;
-  border-radius: 24px;
-  overflow: hidden;
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border-radius: 24px;
+    overflow: hidden;
 }
 
 .bloc-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 24px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
 }
 
 .bloc-overlay {
-  position: absolute;
-  inset: 0;                 /* prend exactement la taille du parent */
-  z-index: 1;
-  pointer-events: none;
-  background: linear-gradient(
-    10.5deg,
-    #0F0F0F 10.52%,
-    rgba(15, 15, 15, 0) 94.59%
-  );
-  border-radius: 24px;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(10.5deg, #0F0F0F 10.52%, rgba(15, 15, 15, 0) 94.59%);
+    border-radius: 24px;
 }
-
 
 .content2 {
     position: absolute;
@@ -199,297 +232,168 @@ a {
     right: 32px;
     color: white;
     z-index: 2;
-    /* text-align: center; */
-
-
-
-
-  }
-
-.content2 h3{
-  /* Zéro soucis pour faire livrer vos colis. */
-
-
-width: 399px;
-height: 80px;
-/* left: 34px; */
-top: 400px;
-
-font-family: 'SF Pro Display',sans-serif;
-font-style: normal;
-font-weight: 500;
-font-size: 48px;
-line-height: 52px;
-/* ou 108% */
-letter-spacing: -1px;
-
-color: #FFFFFF;
-
-
 }
 
-.content2 p{
-  /* Confiez-nous vos envois et suivez-les en temps réel. Rapide, fiable et sans stress. Inscrivez-vous dès maintenant ! */
-
-position: absolute;
-width: 458px;
-/* height: 42px; */
-/* left: 34px; */
-/* top: 524px; */
-
-font-family: 'SF Pro Display',sans-serif;
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 21px;
-letter-spacing: -0.48px;
-
-color: #FFFFFF;
-
-
+.content2 h2 {
+    width: 399px;
+    height: 80px;
+    font-family: 'SF Pro Display', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 52px;
+    letter-spacing: -1px;
+    color: #FFFFFF;
 }
 
-.bloc-overlay h3 {
-    margin: 0 0 10px 0;
-    font-size: 24px;
-    
+.content2 p {
+    position: absolute;
+    width: 458px;
+    font-family: 'SF Pro Display', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: -0.48px;
+    color: #FFFFFF;
 }
 
-.bloc-overlay p {
-    margin: 0;
-    font-size: 16px;
-}
-
+/* Slider */
 .bloc-1-right {
-  /* width: 520px;
-  display: flex;
-  flex-direction: column;
-  align-items: center; */
-  /* Group 237140 */
-
-position: relative;
-width: 532px;
-height: 600px;
-left: 110px;
-/* top: 140px; */
-
-
+    position: relative;
+    width: 532px;
+    height: 600px;
+    left: 110px;
 }
 
 .slider-container {
-  width: 100%;
-  position: relative;
+    width: 100%;
+    position: relative;
 }
 
 .card-stack {
-  position: relative;
-  width: 100%;
-  height: 450px; /* Ajuste selon ton texte */
-  margin-bottom: 30px;
+    position: relative;
+    width: 100%;
+    height: 450px;
+    margin-bottom: 30px;
 }
 
 .cardo {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 24px;
-  background: #FFFFFF;
-  padding: 40px;
-  box-sizing: border-box;
-  transition: all 0.5s ease;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    background: #FFFFFF;
+    padding: 40px;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
 }
 
-/* Carte du fond (la plus petite) */
 .card-back-2 {
-  z-index: 1;
-  transform: translateY(40px) scale(0.90);
-  opacity: 0.4;
-width: 410px;
-height: 468px;
-
-background: #FFFFFF;
-box-shadow: 0px 3.82155px 9.55387px rgba(0, 0, 0, 0.11);
-border-radius: 11.4646px;
-
+    z-index: 1;
+    transform: translateY(40px) scale(0.90);
+    opacity: 0.4;
+    width: 410px;
+    height: 468px;
+    background: #FFFFFF;
+    box-shadow: 0px 3.82155px 9.55387px rgba(0, 0, 0, 0.11);
+    border-radius: 11.4646px;
 }
 
-/* Carte du milieu */
 .card-back-1 {
-  z-index: 2;
-  transform: translateY(20px) scale(0.95);
-  opacity: 0.7;
-
-width: 413px;
-height: 458px;
-
-background: #FFFFFF;
-box-shadow: 0px 4.07692px 10.1923px rgba(0, 0, 0, 0.11);
-border-radius: 12.2308px;
-
-
+    z-index: 2;
+    transform: translateY(20px) scale(0.95);
+    opacity: 0.7;
+    width: 413px;
+    height: 458px;
+    background: #FFFFFF;
+    box-shadow: 0px 4.07692px 10.1923px rgba(0, 0, 0, 0.11);
+    border-radius: 12.2308px;
 }
 
-/* Carte principale */
 .card-main {
-  z-index: 3;
-  display: flex;
-  /* align-items: center; */
-/* width: 532px;
-height: 532px; */
-width: 410px;
-height: 450px;
-/* min-height: 532px; */
-
-/* M3/white */
-background: #FFFFFF;
-box-shadow: 0px 4.256px 10.64px rgba(0, 0, 0, 0.11);
-border-radius: 12.768px;
-
-
-
-
-
-
+    z-index: 3;
+    display: flex;
+    width: 410px;
+    height: 450px;
+    background: #FFFFFF;
+    box-shadow: 0px 4.256px 10.64px rgba(0, 0, 0, 0.11);
+    border-radius: 12.768px;
 }
 
-.slide p{
-  font-family: 'SF Pro Display',sans-serif;
-font-style: normal;
-font-weight: 400;
-font-size: 25.536px;
-line-height: 32px;
-/* ou 125% */
-display: flex;
-align-items: center;
-
-color: #060606;
-
-
-/* Fini les attentes interminable !  Avec Zuri, chaque commande est livrée en un temps record. Plus besoin d’attendre des heures que le livreur du commerçant soit disponible. Notre réseau de coursiers optimise chaque trajet pour que vos colis vous soient livrés plus vite que jamais. Gagnez du temps, évitez la frustration et profitez d’un service fluide et optimisé. Avec Zuri, l’efficacité devient la norme ! */
-
-width: 300px;
-height: 350px;
-/* ou 125% */
-display: flex;
-align-items: center;
-
-color: #060606;
-
-
-/* À l'intérieur de l'auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-}
-
-/* Gestion des slides de texte */
 .slide {
-  display: none;
-  animation: fadeIn 0.5s ease;
-
-  
+    display: none;
+    animation: fadeIn 0.5s ease;
 }
 
 .slide.active {
-  display: block;
+    display: block;
+}
+
+.slide p {
+    font-family: 'SF Pro Display', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #060606;
+    width: 300px;
+    height: 350px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* Pagination (Dots) */
 .dots {
-  /* display: flex;
-  gap: 12px; */
-
-  /* Frame 680 */
-
-/* Mise en page automatique */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 20px;
-
-position: absolute;
-width: 220px;
-/* height: 15px; */
-top: 518px;
-left: 110px;
-
-
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+    position: absolute;
+    width: 220px;
+    top: 518px;
+    left: 110px;
 }
 
 .dot {
-  width: 60px;
-  height: 5px;
-  background: #E9E9E9;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.3s;
+    width: 60px;
+    height: 5px;
+    background: #E9E9E9;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 .dot.active {
-  background: #000000;
+    background: #000000;
 }
 
-/* Cartes empilées */
+/* ======================================== */
+/* BLOC 2 (Téléphone + Features)            */
+/* ======================================== */
 
-
-/* Conteneur principal */
-.card-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 520px;
-  height: 420px;
-  
-}
-
-/* Style général des cartes */
-
-/* Carte principale */
-/* ===== RESET CARTES ===== */
-
-/* Texte dans la carte */
-.cardo p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-  margin: 0;
-}
-
-
-
-/* ===== BLOC 2 ===== */
 .bloc-2-wrapper {
-    /* background: #ffffff; */
-    /* padding: 120px 0; */
-
-    /* Container */
-
-/* Mise en page automatique */
-
-padding: 17px 0px;
-gap: 32px;
-
-/* position: absolute; */
-height: 710px;
-top: 2147px;
-padding: 120px 0;
-
+    padding: 17px 0px;
+    gap: 32px;
+    height: 1000px;
+    top: 2147px;
+    padding: 120px 0;
 }
 
 .bloc-2 {
-
-    display: flex;            
-    justify-content: space-between; 
-    /* align-items: flex-start;   */
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 32px;               
+    gap: 32px;
 }
 
 .bloc-2-left {
@@ -501,7 +405,7 @@ padding: 120px 0;
     top: 80px;
 }
 
-.bloc-2-left h4 {
+.bloc-2-left h2 {
     background: #FFFFFF;
     border-radius: 12px;
     padding: 12px 16px;
@@ -524,88 +428,63 @@ padding: 120px 0;
 }
 
 .bloc-2-center {
-  width: 30%;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: 40px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 40px;
 }
 
 .phone-wrapper {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
-/* TELEPHONE */
 .phone {
-  display: block;
-  max-height: 600px;
-  width: auto;
-
-  position: relative;   /* CRITIQUE */
-  z-index: 10;
+    display: block;
+    max-height: 600px;
+    width: auto;
+    position: relative;
+    z-index: 10;
 }
 
-/* ECRAN */
 .phone-screen {
-
-  position: absolute;
-
-  top: 14px;
-  left: 15px;
-
-  width: 293px;
-  height: 540px;
-
-  background: #000;
-
-  border-radius: 32px;
-
-  z-index: 5;
-
-  overflow: hidden;
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    width: 293px;
+    height: 540px;
+    background: #000;
+    border-radius: 32px;
+    z-index: 5;
+    overflow: hidden;
 }
-
 
 .screen-img {
-
-  position: absolute;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  opacity: 0;
-
-  transition: opacity 0.4s ease;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
 .screen-img.active {
-  opacity: 1;
+    opacity: 1;
 }
 
-
-.feature {
-
-  cursor: pointer;
-
-  transition: all 0.3s ease;
-}
-
-.feature:hover {
-
-  transform: translateX(10px);
-
-  
-  color: #000;
-
-  background: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.5);
-}
-
-.feature:hover p {
-  color: #ddd;
+.screen2 {
+    position: absolute;
+    width: 70px;
+    height: 138px;
+    background: url(../images/fond_phone.png);
+    background-size: cover;
+    border-radius: 10px;
+    top: 218px;
+    left: 34px;
+    transform: rotate(1deg);
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 .bloc-2-right {
@@ -621,9 +500,22 @@ padding: 120px 0;
     background: #f3f3f3;
     padding: 20px;
     border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.feature h5 {
+.feature:hover {
+    transform: translateX(10px);
+    color: #000;
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.feature:hover p {
+    color: #ddd;
+}
+
+.feature h3 {
     font-size: 24px;
     font-weight: 500;
     color: #090B0E;
@@ -636,64 +528,9 @@ padding: 120px 0;
     margin: 0;
 }
 
-
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
-    .bloc {
-        flex-direction: column;
-    }
-    
-    .bloc-1-left, .bloc-1-right,
-    .bloc-2-left, .bloc-2-center, .bloc-2-right {
-        width: 100%;
-    }
-    
-    .badgecontent h2 {
-        font-size: 60px;
-        line-height: 70px;
-    }
-    
-    .cardright {
-        flex-direction: column;
-        align-items: flex-start;
-        top: 200px;
-    }
-    
-    .content {
-        width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Pour simplifier, mais en vrai tu ferais un menu burger */
-    }
-    
-    .badgecontent h2 {
-        font-size: 40px;
-        line-height: 50px;
-    }
-    
-    .hero {
-        height: 800px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* --- SECTION HERO-MOSAIC --- */
-
+/* ======================================== */
+/* HERO MOSAIC                               */
+/* ======================================== */
 
 .hero-mosaic {
     width: 100%;
@@ -701,163 +538,64 @@ padding: 120px 0;
     position: relative;
     overflow: hidden;
     margin: 80px 0;
-  }
-  
-  .mosaic-container {
+}
+
+.mosaic-container {
     position: relative;
     width: 100%;
     height: 100%;
-  }
+}
 
-  .mosaic-item {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
-  .item1 {
-    background-image: url("../images/img1.jpg");
-    background-position: 80% center;
-    transform: scale(1.1);
-  }
-  
-  .item2 {
-    background-image: url("../images/img2.jpg");
-    background-position: 40% center;
-    transform: scaleX(-1) scale(1.0);
-  }
-  
-  .item3 {
-    background-image: url("../images/img3.jpg");
-    background-position: 80% center;
-  }
-  
-  .item4 {
-    background-image: url("../images/img4.png");
-    background-position: 40% center;
-  }
-  
-  .item5 {
-    background-image: url("../images/img5.jpg");
-    background-position: 60% center;
-  }
-  
-  .mosaic-grid {
+.mosaic-grid {
     display: grid;
-    /* Layout exact comme dans Figma : proportions variées */
     grid-template-columns: 0.2fr 0.6fr 0.8fr 0.6fr 0.1fr;
     width: 100%;
     height: 100%;
     gap: 0;
-  }
-  
-  .mosaic-grid img {
+}
+
+.mosaic-item {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  
-  /* Ajustements individuels pour chaque image - comme dans Figma */
-  
-  /* Image 1 - conducteur scooter */
-  .mosaic-grid img:nth-child(1) {
-    /* object-position: 75% center; Décale vers la gauche pour voir le visage */
-  
-    object-position: 80% center;
-    transform: scale(1.1);
-  
-  }
-  
-  .mosaic-overlay-img {
-   /* Ellipse 697 */
-  
-  /* position: absolute;
-  width: 6.65px;
-  height: 15.48px;
-  
-  right: 19px;
-  bottom: 216px;
-  
-  background: linear-gradient(178.83deg, #FFFFFF 1.2%, #FC9266 89.75%);
-  
-  opacity: 0.88;
-  z-index: 1;
-  border-radius: 50% 0% 0% 50%; */
-  
-      
-  
-     
-  
-  }
-
-
-
-  .screen2 {
-    position: absolute;
-    /* width: 82px;  
-    height: 170px;  */
-    width: 70px;  
-    height: 138px;
-    background: url(../images/fond_phone.png);
     background-size: cover;
-    border-radius: 10px; /* Coins arrondis comme un écran de téléphone */
-    /* Position à ajuster précisément sur le téléphone */
-    /* top: 246px;    
-    left: 25px;    */
-    top: 218px;    
-    left: 34px; 
-    /* Si besoin de rotation */
-    transform: rotate(1deg);    
-    z-index: 1;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    
+    background-repeat: no-repeat;
+}
 
-   
+.item1 {
+    background-image: url("../images/img1.jpg");
+    background-position: 80% center;
+    transform: scale(1.1);
+}
 
-    /* transform: rotate(0.2deg); */
-  }
-  
-  /* Image 2 - livreur avec casque */
-  .mosaic-grid img:nth-child(2) {
-    object-position: 40% center; /* Centre sur le livreur */
+.item2 {
+    background-image: url("../images/img2.jpg");
+    background-position: 40% center;
     transform: scaleX(-1) scale(1.0);
-    /* transform: scale(1.2); */
-  
-    
-  }
-  
-  /* Image 3 - deux livreurs */
-  .mosaic-grid img:nth-child(3) {
-    object-position: 80% center; /* Cadre sur les deux personnes */
-  }
-  
-  /* Image 4 - livreur qui court */
-  .mosaic-grid img:nth-child(4) {
-    object-position: 40% center; /* Montre l'action */
-  }
-  
-  /* Image 5 - livreur de dos */
-  .mosaic-grid img:nth-child(5) {
-    object-position: 60% center; /* Cadre sur le livreur */
-    /* transform: scale(1.2); */
-  }
-  
-  /* Overlay plus subtil */
-  .mosaic-overlay {
+}
+
+.item3 {
+    background-image: url("../images/img3.jpg");
+    background-position: 80% center;
+}
+
+.item4 {
+    background-image: url("../images/img4.png");
+    background-position: 40% center;
+}
+
+.item5 {
+    background-image: url("../images/img5.jpg");
+    background-position: 60% center;
+}
+
+.mosaic-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0.6) 100%
-    );
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.6) 100%);
     z-index: 1;
-  }
-  
-  /* Contenu centré */
-  .mosaic-content {
+}
+
+.mosaic-content {
     position: absolute;
     inset: 0;
     z-index: 2;
@@ -868,9 +606,9 @@ padding: 120px 0;
     text-align: center;
     color: #FFFFFF;
     padding: 0 20px;
-  }
-  
-  .mosaic-content h1 {
+}
+
+.mosaic-content h2 {
     font-family: 'SF Pro Display', sans-serif;
     font-size: 56px;
     font-weight: 500;
@@ -878,65 +616,43 @@ padding: 120px 0;
     line-height: 1.1;
     margin-bottom: 20px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  }
-  
-  .hero-badge {
+}
+
+.hero-badge {
     font-size: 20px;
     margin-bottom: 0px;
     opacity: 0.9;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  
-    /* + 1000 Marchands nous ont déjà rejoint, */
-  
-  /* position: absolute; */
-  width: 484px;
-  height: 29px;
-  top: 254px;
-  
-  font-family: 'SF Pro Display', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 29px;
-  /* identique à la hauteur de la zone de texte */
-  text-align: center;
-  letter-spacing: -0.48px;
-  
-  color: #FFFFFF;
-  
-  
-  }
-  
-  .hero-subtext {
+    width: 484px;
+    height: 29px;
+    font-family: 'SF Pro Display', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: -0.48px;
+    color: #FFFFFF;
+}
+
+.hero-subtext {
     font-size: 18px;
-    /* max-width: 700px; */
-    /* line-height: 1.4; */
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 40px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  
-  
-    /* Rejoignez l’application Zuri dès maintenant et soyez parmi les premiers à bénéficiez d'une réduction exclusive pour votre premier mois d'aventure. */
-  
-  /* position: absolute; */
-  width: 890px;
-  height: 75px;
-  top: 293px;
-  
-  font-family: 'SF Pro Display', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 29px;
-  text-align: center;
-  letter-spacing: -0.48px;
-  
-  color: rgba(255, 255, 255, 0.7);
-  
-  
-  }
-  
-  .cta-button {
+    width: 890px;
+    height: 75px;
+    font-family: 'SF Pro Display', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: -0.48px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.cta-button {
     background: #FFFFFF;
     color: #000;
     padding: 16px 40px;
@@ -947,23 +663,23 @@ padding: 120px 0;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
     font-family: 'SF Pro Display', sans-serif;
-  }
-  
-  .cta-button:hover {
+}
+
+.cta-button:hover {
     transform: scale(1.05);
-  }
-    
-  
-    /* faq */
-  
-  /* FAQ avec réponses interactives */
-  .faq {
+}
+
+/* ======================================== */
+/* FAQ SECTION                               */
+/* ======================================== */
+
+.faq {
     width: 1228px;
     margin: 120px auto;
     margin-top: 190px;
-  }
-  
-  .faq h2 {
+}
+
+.faq h2 {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -971,14 +687,21 @@ padding: 120px 0;
     line-height: 31px;
     color: #1A1A1A;
     margin-bottom: 30px;
-  }
-  
-  .faq-item {
+}
+
+.faq-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.faq-item {
     border-bottom: 1px solid #e5e5e5;
     cursor: pointer;
-  }
-  
-  .faq-question {
+}
+
+.faq-question {
     padding: 18px 0;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
@@ -990,37 +713,37 @@ padding: 120px 0;
     justify-content: space-between;
     align-items: center;
     transition: all 0.3s ease;
-  }
-  
-  .faq-question:hover {
+}
+
+.faq-question:hover {
     color: #000000;
     padding-left: 5px;
-  }
-  
-  .faq-icon {
+}
+
+.faq-icon {
     font-size: 20px;
     font-weight: 300;
     transition: transform 0.3s ease;
-  }
-  
-  .faq-item.active .faq-icon {
+}
+
+.faq-item.active .faq-icon {
     transform: rotate(45deg);
-  }
-  
-  .faq-reponse {
+}
+
+.faq-reponse {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-out, padding 0.3s ease;
     background-color: #f9f9f9;
     border-radius: 0 0 12px 12px;
-  }
-  
-  .faq-item.active .faq-reponse {
-    max-height: 200px; /* Ajustez selon la longueur de vos réponses */
+}
+
+.faq-item.active .faq-reponse {
+    max-height: 200px;
     padding: 0 20px 20px 20px;
-  }
-  
-  .faq-reponse p {
+}
+
+.faq-reponse p {
     font-family: 'SF Pro Display', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -1028,126 +751,95 @@ padding: 120px 0;
     line-height: 1.6;
     color: #555;
     margin: 0;
-  }
-  
-  
-  /* discover - corrigé */
-  
-  .discover {
+}
+
+/* ======================================== */
+/* DISCOVER SECTION                          */
+/* ======================================== */
+
+.discover {
     width: 1228px;
     margin: 120px auto;
     margin-top: 190px;
-  }
-  
-  .discover-container {
+}
+
+.discover-container {
     display: flex;
     gap: 24px;
-    height: 400px; /* Hauteur fixe comme dans Figma */
-  }
-  
-  .discover-card {
+    height: 400px;
+}
+
+.discover-card {
     flex: 1;
-    border-radius: 28px; /* Coins plus arrondis comme dans l'image */
+    border-radius: 28px;
     overflow: hidden;
     position: relative;
-    background-color: #000; /* Fallback */
-  }
-  
-  /* Conteneurs d'images */
-  #imagecommercant,
-  #imagelivreur,
-  #imagevtc {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-
-  .discover-card {
+    background-color: #000;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-  }
+    transition: all 0.3s ease;
+}
 
-  .discover-vtc {
+.discover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.discover-vtc {
     background-image: url("../images/vtc.jpg");
     background-position: center 20%;
-  }
-  
-  .discover-commercant {
+}
+
+.discover-commercant {
     background-image: url("../images/commercant.jpg");
     background-position: 40% center;
-  }
-  
- 
-  
-  
-  
-  .discover-card img {
+}
+
+.discover-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
-  }
-  
-  /* Effet de zoom au survol */
-  .discover-card:hover img {
+}
+
+.discover-card:hover img {
     transform: scale(1.05);
-  }
-  
-  /* Overlay plus sophistiqué - dégradé du bas vers le haut */
-  .discover-overlay {
+}
+
+.discover-overlay {
     position: absolute;
     inset: 0;
     z-index: 1;
-    pointer-events: none; /* Permet de cliquer à travers */
-  
-  
-    /* Rectangle 3467561 */
-  /* width: 410px; */
-  width: 100%;
-  height: 429px;
-  left: -1px;
-  top: 0px;
-  
-  /* background: linear-gradient(190.23deg, rgba(0, 0, 0, 0) 7.07%, rgba(20, 20, 20, 0.65) 52.12%, #141414 92.36%); */
-  background: linear-gradient(190.98deg, rgba(0, 0, 0, 0) 40.15%, rgba(20, 20, 20, 0.65) 67.47%, #141414 91.88%);
-  
-  }
-  
-  /* Contenu textuel */
-  .discover-content {
+    pointer-events: none;
+    width: 100%;
+    height: 429px;
+    background: linear-gradient(190.98deg, rgba(0, 0, 0, 0) 40.15%, rgba(20, 20, 20, 0.65) 67.47%, #141414 91.88%);
+}
+
+.discover-content {
     position: absolute;
     bottom: 40px;
     left: 32px;
     right: 32px;
     color: white;
     z-index: 2;
-  
     display: flex;
- 
+}
 
-
-
-  }
-  
-  .discover-content h3 {
+.discover-content h2 {
     font-family: 'SF Pro Display', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 32px; 
+    font-size: 32px;
     line-height: 1.2;
     letter-spacing: -0.5px;
     margin-bottom: 0px;
     color: #FFFFFF;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  
-  
+}
 
-
-    
-  }
-  
-  .neutre1{
+.neutre, .neutre1 {
     display: inline-block;
     font-family: 'SF Pro Display', sans-serif;
     font-style: normal;
@@ -1159,184 +851,172 @@ padding: 120px 0;
     padding: 12px 24px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 40px; 
+    border-radius: 40px;
     backdrop-filter: blur(5px);
     transition: all 0.3s ease;
-    margin-left: 16%;
-    /* margin-left: 35%; */
-
     align-self: flex-start;
     margin-top: 59px;
+}
 
-
-
-  }
-
-  .neutre{
-    display: inline-block;
-    font-family: 'SF Pro Display', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1;
-    color: #FFFFFF;
-    text-decoration: none;
-    padding: 12px 24px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 40px; 
-    backdrop-filter: blur(5px);
-    transition: all 0.3s ease;
+.neutre {
     margin-left: 35%;
+}
 
-    align-self: flex-start;
-    margin-top: 59px;
-  }
-  
-  .discover-content a:hover {
+.neutre1 {
+    margin-left: 16%;
+}
+
+.discover-content a:hover {
     background: rgba(255, 255, 255, 0.25);
     border-color: rgba(255, 255, 255, 0.5);
     transform: translateY(-2px);
-  }
-  
-  /* Styles spécifiques pour chaque image (optionnel) */
-  #imagecommercant img {
-    /* object-position: center */
-    object-position: 40% center;
-  }
-  
-  #imagelivreur img {
-    /* object-position: center 40%;
-     */
-     object-position: 90% center;
-  }
-  
-  #imagevtc img {
-    object-position: center 20%;
-  }
-  
-   
-  
-  
-  /* Pour un effet "glassmorphisme" sur les badges (si présents dans Figma) */
-  .discover-badge {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    padding: 6px 12px;
-    border-radius: 30px;
+}
+
+
+
+/* ======================================== */
+/* SCROLL BUTTON                             */
+/* ======================================== */
+
+#scrollBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: black;
     color: white;
-    font-size: 14px;
-    z-index: 2;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  
-  /* Animation au survol plus fluide */
-  .discover-card {
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
-  }
-  
-  .discover-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-  }
-  
+}
 
+#scrollBtn:hover {
+    transform: scale(1.1);
+}
 
+/* ======================================== */
+/* MOBILE MENU OFFCANVAS                     */
+/* ======================================== */
 
-    #scrollBtn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: none;
-      background: black;
-      color: white;
-      font-size: 22px;
-      cursor: pointer;
-      z-index: 999;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-    }
+.hamburger {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: white;
+    z-index: 6000;
+}
+
+.close-btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+    z-index: 4000;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ======================================== */
+/* RESPONSIVE: MOBILE (max-width: 768px)     */
+/* ======================================== */
+
+@media screen and (max-width: 768px) {
     
-    #scrollBtn:hover {
-      transform: scale(1.1);
+    /* Layout général */
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
+    * {
+        box-sizing: border-box;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       /* ===== RESPONSIVE MOBILE (ajouté sans toucher au PC) ===== */
-   @media screen and (max-width: 768px) {
     /* Navbar mobile */
     .navbar {
         padding: 10px 16px;
         height: auto;
         position: fixed;
-        /* background: white; */
         background: rgba(255, 255, 255, 255);
         top: 0;
         left: 0;
         width: 100%;
     }
+
     .menu {
         width: 100%;
         gap: 15px;
         flex-wrap: wrap;
         mix-blend-mode: difference;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-    }
     .logo img { 
-      height: 30px; 
-      width: auto; 
-    
+        height: 30px; 
+        width: auto; 
     }
-    /* ul {
-        order: 3;
-        width: 100%;
-        justify-content: center;
-        gap: 20px;
-        height: auto;
-    } */
 
     .menu > ul {
-      order: 3;
-      width: 100%;
-      justify-content: center;
-      gap: 20px;
-  }
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 85%;
+        max-width: 320px;
+        height: 100vh;
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        padding-top: 60px;
+        transition: 0.35s ease;
+        z-index: 5000;
+        box-shadow: 5px 0 25px rgba(0,0,0,0.08);
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0;
+    }
 
-    .commerçant, .livreur, .vtc { color: #000; } /* lisibilité sur fond blanc */
+    .menu ul.active {
+        left: 0;
+    }
+
+    .menu ul li {
+        padding: 14px 25px;
+        border-bottom: 1px solid #f1f1f1;
+        width: 100%;
+    }
+
+    .menu ul li a {
+        font-size: 18px;
+        color: #111;
+    }
+
+    .commerçant, .livreur, .vtc { 
+        color: #000; 
+    }
+
     .inscription {
         margin-left: 14%;
         order: 2;
@@ -1344,7 +1024,9 @@ padding: 120px 0;
         padding: 6px 20px;
     }
 
-    
+    .hamburger {
+        display: block;
+    }
 
     /* Activités */
     .activites {
@@ -1360,39 +1042,95 @@ padding: 120px 0;
         width: 100%;
         height: 500px;
         background-size: cover;
+        opacity: 1 !important;
+        min-height: 400px !important;
     }
+    
     .content {
         width: 100%;
-        /* height: auto; */
-        height:65%;
+        height: 65%;
         padding: 30px 20px;
     }
+    
     .badge {
         width: auto;
         font-size: 18px;
         height: auto;
         padding: 6px 12px;
     }
+    
     #marchand, #livreur {
         font-size: 18px;
         width: auto;
         height: auto;
     }
+    
     .badgecontent {
         width: 100%;
         height: auto;
     }
+    
     .content h2 {
         width: 100%;
         height: auto;
         font-size: 36px;
         line-height: 42px;
     }
+    
     .content p {
         width: 100%;
         height: auto;
         font-size: 16px;
         line-height: 22px;
+    }
+
+    /* Cartes activités */
+    .activites .card {
+        background-image: url('images/marchand.jpg') !important;
+        background-size: 200% auto !important;
+        background-repeat: no-repeat !important;
+        height: 400px !important;
+        background-position: center 80%;
+    }
+    
+    .activites .card.left {
+        background-position: left 55% !important;
+    }
+    
+    .activites .card.right {
+        background-position: right 55% !important;
+    }
+
+    /* Phone section */
+    .phone-wrapper {
+        position: relative;
+        width: 280px;
+        margin: 0 auto;
+    }
+    
+    .screen {
+        position: absolute;
+        width: 249px;
+        height: 485px;
+        background: #242424;
+        border-radius: 30px;
+        top: 13px;
+        left: 15px;
+        z-index: 1;
+    }
+
+    .screen2 {
+        position: absolute;
+        width: 100%;
+        height: 32%;
+        top: 44%;
+        left: 7%;
+        background: url(images/fond_phone.png);
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+        z-index: 3;
+        box-shadow: 0 0 8px rgba(0,0,0,0.25);
     }
 
     /* Experience */
@@ -1401,19 +1139,77 @@ padding: 120px 0;
         margin: 60px auto;
         padding: 0 16px;
     }
+    
     .experience-container {
         flex-direction: column;
         gap: 40px;
     }
+    
     .experience-left h2 {
         font-size: 32px;
         line-height: 40px;
     }
-    .feature h4 { font-size: 20px; }
-    .feature p { font-size: 16px; }
     
+    .feature h4 { 
+        font-size: 20px; 
+    }
+    
+    .feature p { 
+        font-size: 16px; 
+    }
 
-   
+    /* Hero Mosaic */
+    .hero-mosaic {
+        height: 300px;
+    }
+    
+    .mosaic-grid {
+        grid-template-columns: 0.4fr 0.8fr 0.8fr 0.6fr 0.2fr;
+    }
+
+    .mosaic-grid img:nth-child(1) {
+        object-position: 80% center;
+    }
+    
+    .mosaic-grid img:nth-child(4) {
+        object-position: center 70%;
+    }
+    
+    .mosaic-grid img:nth-child(5) {
+        object-position: 60% center;
+    }
+    
+    .mosaic-content {
+        padding: 0 16px;
+        gap: 8px;
+        margin-top: 50px;
+    }
+    
+    .mosaic-content h1 {
+        font-size: 22px;
+        margin: 0;
+        line-height: 1.2;
+    }
+    
+    .hero-badge {
+        font-size: 12px;
+        margin: 0;
+        line-height: 16px;
+        width: auto;
+    }
+    
+    .hero-subtext {
+        font-size: 13px;
+        margin: 0;
+        line-height: 18px;
+        width: 100%;
+        height: auto;
+    }
+    
+    .cta-button {
+        padding: 8px 18px;
+        font-size: 12px;
+    }
 
     /* FAQ */
     .faq {
@@ -1430,40 +1226,35 @@ padding: 120px 0;
         margin-top: 80px;
         padding: 0 16px;
     }
+    
     .discover-container {
-      flex-direction: column;
-      gap: 16px;
-      height: auto;
+        flex-direction: column;
+        gap: 16px;
+        height: auto;
     }
-  
+    
     .discover-card {
-      height: 250px; /* taille contrôlée */
-      border-radius: 24px;
+        height: 250px;
+        border-radius: 24px;
     }
-  
+    
     .discover-card img {
-      object-fit: cover;
+        object-fit: cover;
     }
-  
-    /* Overlay corrigé */
+    
     .discover-overlay {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        180deg,
-        rgba(0,0,0,0) 20%,
-        rgba(0,0,0,0.6) 60%,
-        rgba(0,0,0,0.9) 100%
-      );
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.9) 100%);
     }
-  
+    
     .discover-content h3 {
-      font-size: 22px;
+        font-size: 22px;
     }
-  
+    
     .discover-content a {
-      font-size: 16px;
-      padding: 8px 18px;
+        font-size: 16px;
+        padding: 8px 18px;
     }
 
     /* Footer */
@@ -1473,957 +1264,462 @@ padding: 120px 0;
         align-items: center;
         text-align: center;
     }
-    .footer-left { align-items: center; }
+    
+    .footer-left { 
+        align-items: center; 
+    }
+    
     .footer-right {
         align-items: center;
         width: 100%;
         gap: 20px;
     }
-    .footer-links { justify-content: center; }
+    
+    .footer-links { 
+        justify-content: center; 
+    }
 }
 
-/* Très petits écrans */
+/* ======================================== */
+/* RESPONSIVE: TRÈS PETITS ÉCRANS (max-width: 480px) */
+/* ======================================== */
+
 @media screen and (max-width: 480px) {
-    .content h2 { font-size: 28px; line-height: 34px; }
-    .badge { font-size: 16px; }
-    .mosaic-content h1 { font-size: 28px; }
-    .hero-subtext { font-size: 14px; }
-    .discover-content h3 { font-size: 24px; }
-    .discover-content a { font-size: 18px; }
-}
-
-/* CORRECTION URGENTE POUR MOBILE - Images de fond des activités */
-@media screen and (max-width: 768px) {
-  /* Correction pour les cartes activités */
-  .card.left {
-      background-image: url('images/marchand.jpg') !important;
-      background-size: cover !important;
-      background-position: center !important;
-      display: block !important;
-  }
-  
-  .card.right {
-      background-image: url('images/marchand.jpg') !important;
-      background-size: cover !important;
-      background-position: center !important;
-      display: block !important;
-  }
-  
-  /* Correction pour les logos */
-  .logo img[src="images/Vector.png"],
-  .logo img[src="images/zuri_name.png"] {
-      display: inline-block !important;
-      visibility: visible !important;
-      opacity: 1 !important;
-  }
-  
-  /* Force l'affichage des conteneurs */
-  .card {
-      opacity: 1 !important;
-      min-height: 400px !important;
-  }
-}
-
-/* CORRECTION COMPLÈTE POUR MOBILE */
-@media screen and (max-width: 768px) {
-  
-
-  
-  /* Alternative : si "content" ne marche pas, décommentez ceci :
-  .logo a img[src="images/zuri_name.png"] {
-      src: url('images/zuri_name.png') !important;
-  }
-  */
-  
-  /* 2. CORRECTION DE LA CARTE ACTIVITÉS (une seule image coupée) */
-  .activites .card {
-      background-image: url('images/marchand.jpg') !important;
-      background-size: 200% auto !important; /* Garde le même effet de coupure */
-      background-repeat: no-repeat !important;
-      height: 400px !important;
-        
-        background-position: center 80%; /* descend l’image */
-  }
-  
-  .activites .card.left {
-      /* background-position: left bottom !important; */
-      background-position: left 55% !important;
-  }
-  
-  .activites .card.right {
-      background-position: right 55% !important;
-  }
-  
-  
-  
-  /* 4. Correction des images dans la grille mosaic */
-  .mosaic-grid img {
-      src: attr(src) !important; 
-  }
-}
-
-
-
-
-/* BOUTON HAMBURGER (créé en JS) */
-.hamburger {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-  color: white;
-}
-
-/* MENU MOBILE */
-@media screen and (max-width: 768px) {
-
-  .menu {
-    position: relative;
-  }
-
-
-
-  
-
-  .menu ul li {
-    padding: 15px 20px;
-    border-bottom: 1px solid #eee;
-    text-align: left;
-  }
-
-  .menu ul li a {
-    color: black;
-    font-size: 16px;
-  }
-
- 
-
-  .hamburger {
-    display: block;
-  }
-
-  /* centre le logo sur mobile */
-  .menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .logo {
-    /* margin: 0 auto; */
-  }
-
-  /* agrandir le logo */
-  .logo img:first-child {
-    /* width: 28px; */
-    height: 30px;
+    .content h2 { 
+        font-size: 28px; 
+        line-height: 34px; 
+    }
     
-  }
-
-  .logo img:last-child {
-    /* height: 22px; */
-    height: 22px;
+    .badge { 
+        font-size: 16px; 
+    }
     
-  }
+    .mosaic-content h1 { 
+        font-size: 28px; 
+    }
+    
+    .hero-subtext { 
+        font-size: 14px; 
+    }
+    
+    .discover-content h3 { 
+        font-size: 24px; 
+    }
+    
+    .discover-content a { 
+        font-size: 18px; 
+    }
 }
 
+/* ======================================== */
+/* RESPONSIVE: TABLETTE (769px - 1024px)     */
+/* ======================================== */
 
-/* NAVBAR AU-DESSUS DE TOUT */
-.navbar {
-  z-index: 1000;
-}
-
-/* MENU MOBILE AU-DESSUS DES CARTES */
-@media screen and (max-width: 768px) {
-
-  .menu ul {
-    z-index: 999;
-  }
-
-  /* Optionnel mais recommandé */
-  .activites,
-  .card {
-    position: relative;
-    z-index: 1;
-  }
-
-
- 
-}
-
-
-
-
-
-
-@media screen and (max-width: 768px) {
-  
-  .phone-wrapper {
-    position: relative;
-    width: 280px; /* Largeur fixe du téléphone */
-    margin: 0 auto;
-  }
-  
-  .screen {
-    position: absolute;
-    width: 249px;  /* Largeur de l'écran */
-    height: 485px; /* Hauteur de l'écran */
-    background: #242424;
-    border-radius: 30px;
-    top: 13px;     /* Position verticale */
-    left: 15px;    /* Position horizontale */
-    z-index: 1;
-  }
-}
-
-
-
-
-
-/* MENU MOBILE OFFCANVAS */
-@media screen and (max-width: 768px) {
-
-
-
-
-
-    /* HERO MOSAIC */
-    @media screen and (max-width: 768px) {
-
-      .hero-mosaic {
-        height: 300px;
-      }
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     
-      .mosaic-content {
-        padding: 0 16px;
-        gap: 8px; /* espace contrôlé entre les éléments */
-        margin-top: 50px;
-      }
-    
-      .mosaic-content h1 {
-        font-size: 22px;
-        margin: 0;
-        line-height: 1.2;
-      }
-    
-      .hero-badge {
-        font-size: 12px;
-        margin: 0;
-        line-height: 16px;
-      }
-    
-      .hero-subtext {
-        font-size: 13px;
-        margin: 0;
-        line-height: 18px;
+    /* Layout général */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Navbar tablette */
+    .navbar {
         width: 100%;
-      }
-    
-      .cta-button {
-        /* margin: 10px 0 0 0;  */
-        padding: 8px 18px;
-        font-size: 12px;
-      }
-    
-
-
-      
+        padding: 8px 24px;
+        left: 0;
+        position: fixed;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
     }
 
-
-
-    @media screen and (max-width: 768px) {
-
-
-      .mosaic-grid {
-        grid-template-columns: 0.4fr 0.8fr 0.8fr 0.6fr 0.2fr;
-      }
-
-      .mosaic-grid img:nth-child(1) {
-        object-position: 80% center; /* gauche/droite */
-        /* transform: scaleX(1.1); */
-
-      }
-    
-      .mosaic-grid img:nth-child(2) {
-        /* object-position: 30% center; */
-      }
-    
-      .mosaic-grid img:nth-child(3) {
-        /* object-position: center top;  */
-      }
-    
-      .mosaic-grid img:nth-child(4) {
-        object-position: center 70%;
-      }
-    
-      .mosaic-grid img:nth-child(5) {
-        object-position: 60% center;
-      }
-    
+    .menu {
+        width: 100%;
+        gap: 24px;
     }
 
+    .logo img {
+        height: 35px;
+    }
 
+    .logo img:last-child {
+        height: 25px;
+    }
 
-@media screen and (max-width: 768px) {
-  
-  html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
+    .menu ul {
+        position: relative;
+        left: 0;
+        width: auto;
+        height: auto;
+        background: transparent;
+        padding-top: 0;
+        flex-direction: row;
+        box-shadow: none;
+        transition: none;
+        gap: 24px;
+        margin-left: 20px;
+    }
 
-  * {
-    box-sizing: border-box;
-  }
+    .menu ul li {
+        padding: 0;
+        border-bottom: none;
+    }
 
+    .menu ul li a {
+        color: #000000;
+        font-size: 15px;
+    }
+
+    .inscription {
+        margin-left: auto;
+        margin-right: 0;
+        width: auto;
+        padding: 8px 20px;
+        background: #000000;
+        color: #FFFFFF;
+        border-radius: 25px;
+    }
+
+    .hamburger, .close-btn, .menu-overlay {
+        display: none !important;
+    }
+
+    /* Activités tablette */
+    .activites {
+        width: 90%;
+        margin: 140px auto 80px;
+        gap: 20px;
+    }
+
+    .card {
+        height: 600px;
+        background-size: 200% auto;
+    }
+
+    .card.left {
+        background-position-x: left;
+        background-size: 200% auto;
+    }
+
+    .card.right {
+        background-position-x: right;
+        background-size: 200% auto;
+    }
+
+    .content {
+        width: 100%;
+        height: auto;
+        padding: 30px 24px;
+    }
+
+    .badge {
+        width: auto;
+        font-size: 20px;
+        padding: 6px 12px;
+    }
+
+    #marchand, #livreur {
+        font-size: 20px;
+        width: auto;
+        padding: 2px 12px;
+    }
+
+    .content h2 {
+        width: 100%;
+        font-size: 42px;
+        line-height: 48px;
+    }
+
+    .content p {
+        width: 90%;
+        font-size: 17px;
+        line-height: 24px;
+    }
+
+    /* Experience tablette */
+    .experience {
+        width: 90%;
+        margin: 80px auto;
+    }
+
+    .experience-container {
+        gap: 40px;
+    }
+
+    .experience-left h2 {
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 30px;
+    }
+
+    .feature {
+        padding: 22px;
+    }
+
+    .feature h4 {
+        font-size: 22px;
+    }
+
+    .feature p {
+        font-size: 16px;
+    }
+
+    .experience-right {
+        align-items: center;
+    }
+
+    .phone-wrapper {
+        width: 280px;
+        margin: 0 auto;
+    }
+
+    .screen {
+        background: #242424;
+    }
+
+    .screen2 {
+        width: 70px;
+        height: 140px;
+        top: 210px;
+        left: 22px;
+    }
+
+    /* Hero Mosaic tablette */
+    .hero-mosaic {
+        height: 450px;
+        margin: 60px 0;
+    }
+
+    .mosaic-grid {
+        grid-template-columns: 0.3fr 0.7fr 0.9fr 0.7fr 0.2fr;
+    }
+
+    .mosaic-grid img:nth-child(1) {
+        object-position: 75% center;
+    }
+
+    .mosaic-grid img:nth-child(2) {
+        object-position: 45% center;
+    }
+
+    .mosaic-grid img:nth-child(3) {
+        object-position: 75% center;
+    }
+
+    .mosaic-grid img:nth-child(4) {
+        object-position: 45% center;
+    }
+
+    .mosaic-grid img:nth-child(5) {
+        object-position: 65% center;
+    }
+
+    .mosaic-content {
+        padding: 0 40px;
+        gap: 15px;
+    }
+
+    .mosaic-content h1 {
+        font-size: 42px;
+        max-width: 700px;
+        margin-bottom: 10px;
+    }
+
+    .hero-badge {
+        font-size: 20px;
+        width: auto;
+        margin-bottom: 5px;
+    }
+
+    .hero-subtext {
+        font-size: 18px;
+        width: 80%;
+        max-width: 700px;
+        height: auto;
+        margin: 15px auto 25px;
+    }
+
+    .cta-button {
+        padding: 14px 35px;
+        font-size: 16px;
+    }
+
+    /* FAQ tablette */
+    .faq {
+        width: 90%;
+        margin: 80px auto;
+        margin-top: 100px;
+    }
+
+    .faq h2 {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
+    .faq-question {
+        font-size: 18px;
+        padding: 20px 0;
+    }
+
+    .faq-reponse p {
+        font-size: 16px;
+    }
+
+    /* Discover tablette */
+    .discover {
+        width: 90%;
+        margin: 80px auto;
+        margin-top: 100px;
+    }
+
+    .discover-container {
+        height: 350px;
+        gap: 20px;
+    }
+
+    .discover-content h3 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .discover-content a {
+        font-size: 20px;
+        padding: 10px 22px;
+    }
+
+    .discover-overlay {
+        width: 100%;
+        background: linear-gradient(180deg, rgba(0,0,0,0) 10%, rgba(0,0,0,0.7) 60%, #141414 90%);
+    }
+
+    /* Footer tablette */
+    .footer {
+        padding: 30px 0;
+    }
+
+    .footer-container {
+        width: 90%;
+        padding: 0;
+    }
+
+    .footer-left {
+        gap: 15px;
+    }
+
+    .footer-left p {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        line-height: 24px;
+        font-size: 14px;
+    }
+
+    .copy {
+        margin: 0 5px;
+    }
+
+    .footer-right {
+        gap: 30px;
+    }
+
+    .footer-links a {
+        font-size: 14px;
+    }
+
+    /* Scroll button */
+    #scrollBtn {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+        bottom: 25px;
+        right: 25px;
+    }
 }
 
-.inscription{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 24px;
-  gap: 10px;
-  margin: 0 auto;
-  width: 106px;
-  height: 33px;
-  background: #FFFFFF;
-  border-radius: 15px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  text-decoration: none;
-  /* margin-left: 53%; */
-  color: black;
-  font-family: 'SF Pro Display', sans-serif;
-  margin-right: 12px;
+/* ======================================== */
+/* RESPONSIVE: TABLETTE PAYSAGE (1024px - 1180px) */
+/* ======================================== */
 
-
-
-  /* S’inscrire */
-
-/* width: 58px;
-height: 17px; */
-
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 17px;
-/* identique à la hauteur de la zone de texte */
-
-color: #000000;
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ============================= */
-/* MOBILE MENU OFFCANVAS CLEAN  */
-/* ============================= */
-
-@media screen and (max-width: 768px) {
-
-  /* Empêche scroll horizontal */
-  html, body {
-    overflow-x: hidden;
-  }
-
-  /* Cache menu normal */
-  .menu ul {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 85%;
-    max-width: 320px;
-    height: 100vh;
-    background: #ffffff;
-    display: flex;
-    flex-direction: column;
-    padding-top: 60px;
-    transition: 0.35s ease;
-    z-index: 5000;
-    box-shadow: 5px 0 25px rgba(0,0,0,0.08);
-  }
-
-  /* Quand actif */
-  .menu ul.active {
-    left: 0;
-  }
-
-  /* Liens */
-  .menu ul li {
-    padding: 14px 25px;
-    border-bottom: 1px solid #f1f1f1;
-  }
-
-  .menu ul li a {
-    font-size: 18px;
-    color: #111;
-  }
-
-  .menu ul {
-    justify-content: flex-start;  /* important */
-    align-items: flex-start;      /* important */
-}
-
-  /* Hamburger */
-  .hamburger {
-    display: block;
-    font-size: 26px;
-    cursor: pointer;
-    color: black;
-    z-index: 6000;
-  }
-
-  /* Bouton fermer */
-  .close-btn {
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    font-size: 26px;
-    cursor: pointer;
-  }
-
-  /* Overlay sombre derrière */
-  .menu-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.4);
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.3s ease;
-    z-index: 4000;
-  }
-
-  .menu-overlay.active {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-
-  .menu ul {
-    height: 100vh;      /* force la bonne hauteur */
-    gap: 0;             /* enlève espace horizontal */
-  }
-
-
-  ul {
-    height: auto;   /* remplace le height:17px */
-  }
-
-}
-
-
-
-@media screen and (max-width: 768px) {
-
-  .screen2 {
-    position: absolute;
-
-    width: 100%;
-    height: 32%;
-
-    top: 44%;
-    left: 7%;
-
-    background: url(images/fond_phone.png);
-    background-size: cover;
-    background-position: center;
-
-    border-radius: 8px;
-    z-index: 3;
-
-    box-shadow: 0 0 8px rgba(0,0,0,0.25);
-  }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ===== RESPONSIVE TABLETTE (768px - 1024px) ===== */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    
-  /* Layout général */
-  body {
-      overflow-x: hidden;
-  }
-
-  /* NAVBAR TABLETTE */
-  .navbar {
-      width: 100%;
-      padding: 8px 24px;
-      left: 0;
-      position: fixed;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-  }
-
-  .menu {
-      width: 100%;
-      gap: 24px;
-  }
-
-  .logo img {
-      height: 35px;
-  }
-
-  .logo img:last-child {
-      height: 25px;
-  }
-
-  .menu ul {
-      gap: 24px;
-      margin-left: 20px;
-  }
-
-  .menu ul li a {
-      color: #000000;
-      font-size: 15px;
-  }
-
-  .inscription {
-      margin-left: auto;
-      margin-right: 0;
-      width: auto;
-      padding: 8px 20px;
-      background: #000000;
-      color: #FFFFFF;
-      border-radius: 25px;
-  }
-
-  /* ACTIVITES TABLETTE */
-  .activites {
-      width: 90%;
-      margin: 140px auto 80px;
-      gap: 20px;
-  }
-
-  .card {
-      height: 600px;
-      background-size: 200% auto;
-  }
-
-  .content {
-      width: 100%;
-      height: auto;
-      padding: 30px 24px;
-  }
-
-  .badge {
-      width: auto;
-      font-size: 20px;
-      padding: 6px 12px;
-  }
-
-  #marchand, #livreur {
-      font-size: 20px;
-      width: auto;
-      padding: 2px 12px;
-  }
-
-  .content h2 {
-      width: 100%;
-      font-size: 42px;
-      line-height: 48px;
-  }
-
-  .content p {
-      width: 90%;
-      font-size: 17px;
-      line-height: 24px;
-  }
-
-  /* EXPERIENCE TABLETTE */
-  .experience {
-      width: 90%;
-      margin: 80px auto;
-  }
-
-  .experience-container {
-      gap: 40px;
-  }
-
-  .experience-left h2 {
-      font-size: 36px;
-      line-height: 44px;
-      margin-bottom: 30px;
-  }
-
-  .feature {
-      padding: 22px;
-  }
-
-  .feature h4 {
-      font-size: 22px;
-  }
-
-  .feature p {
-      font-size: 16px;
-  }
-
-  /* Téléphone dans section expérience */
-  .phone-wrapper {
-      width: 280px;
-  }
-
-  .screen {
-      top: 12px;
-      left: 14px;
-      right: 16px;
-      bottom: 15px;
-      border-radius: 25px;
-  }
-
-  .screen2 {
-      width: 70px;
-      height: 140px;
-      top: 210px;
-      left: 22px;
-  }
-
-  /* HERO MOSAIC TABLETTE */
-  .hero-mosaic {
-      height: 450px;
-      margin: 60px 0;
-  }
-
-  .mosaic-grid {
-      grid-template-columns: 0.3fr 0.7fr 0.9fr 0.7fr 0.2fr;
-  }
-
-  .mosaic-content h1 {
-      font-size: 42px;
-      max-width: 700px;
-  }
-
-  .hero-badge {
-      font-size: 20px;
-      width: auto;
-  }
-
-  .hero-subtext {
-      font-size: 18px;
-      width: 80%;
-      max-width: 700px;
-      height: auto;
-      margin: 15px auto;
-  }
-
-  .cta-button {
-      padding: 14px 35px;
-      font-size: 16px;
-  }
-
-  /* FAQ TABLETTE */
-  .faq {
-      width: 90%;
-      margin: 80px auto;
-      margin-top: 100px;
-  }
-
-  .faq h2 {
-      font-size: 28px;
-      margin-bottom: 40px;
-  }
-
-  .faq-question {
-      font-size: 18px;
-      padding: 20px 0;
-  }
-
-  .faq-reponse p {
-      font-size: 16px;
-  }
-
-  /* DISCOVER TABLETTE */
-  .discover {
-      width: 90%;
-      margin: 80px auto;
-      margin-top: 100px;
-  }
-
-  .discover-container {
-      height: 350px;
-      gap: 20px;
-  }
-
-  .discover-content h3 {
-      font-size: 28px;
-      margin-bottom: 15px;
-  }
-
-  .discover-content a {
-      font-size: 20px;
-      padding: 10px 22px;
-  }
-
-  .discover-overlay {
-      width: 100%;
-      background: linear-gradient(180deg, rgba(0,0,0,0) 10%, rgba(0,0,0,0.7) 60%, #141414 90%);
-  }
-
-  /* FOOTER TABLETTE */
-  .footer {
-      padding: 30px 0;
-  }
-
-  .footer-container {
-      width: 90%;
-      padding: 0;
-  }
-
-  .footer-left p {
-      font-size: 14px;
-  }
-
-  .footer-right {
-      gap: 30px;
-  }
-
-  .footer-links a {
-      font-size: 14px;
-  }
-
-  /* SCROLL BUTTON */
-  #scrollBtn {
-      width: 45px;
-      height: 45px;
-      font-size: 20px;
-      bottom: 25px;
-      right: 25px;
-  }
-}
-
-/* ===== TABLETTE MODE PAYSAGE (1024px spécifique) ===== */
 @media screen and (min-width: 1024px) and (max-width: 1180px) {
-  
-  .navbar {
-      width: 100%;
-      left: 0;
-      padding: 8px 30px;
-  }
+    
+    .navbar {
+        width: 100%;
+        left: 0;
+        padding: 8px 30px;
+    }
 
-  .menu {
-      width: 100%;
-  }
+    .menu {
+        width: 100%;
+    }
 
-  .inscription {
-      margin-left: auto;
-  }
+    .inscription {
+        margin-left: auto;
+    }
 
-  .activites, 
-  .experience, 
-  .faq, 
-  .discover {
-      width: 95%;
-  }
+    .activites, 
+    .experience, 
+    .faq, 
+    .discover {
+        width: 95%;
+    }
 
-  .content h2 {
-      font-size: 44px;
-  }
+    .content h2 {
+        font-size: 44px;
+    }
 
-  .mosaic-content h1 {
-      font-size: 48px;
-  }
+    .mosaic-content h1 {
+        font-size: 48px;
+    }
 
-  .hero-subtext {
-      width: 70%;
-  }
+    .hero-subtext {
+        width: 70%;
+    }
 }
 
-/* ===== TABLETTE PETIT FORMAT (768px - 850px) ===== */
+/* ======================================== */
+/* RESPONSIVE: PETITE TABLETTE (769px - 850px) */
+/* ======================================== */
+
 @media screen and (min-width: 769px) and (max-width: 850px) {
-  
-  .menu ul {
-      gap: 16px;
-  }
+    
+    .menu ul {
+        gap: 16px;
+    }
 
-  .menu ul li a {
-      font-size: 14px;
-  }
+    .menu ul li a {
+        font-size: 14px;
+    }
 
-  .inscription {
-      padding: 6px 16px;
-      font-size: 13px;
-  }
+    .inscription {
+        padding: 6px 16px;
+        font-size: 13px;
+    }
 
-  .content h2 {
-      font-size: 36px;
-      line-height: 42px;
-  }
+    .content h2 {
+        font-size: 36px;
+        line-height: 42px;
+    }
 
-  .experience-left h2 {
-      font-size: 32px;
-      line-height: 40px;
-  }
+    .experience-left h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
 
-  .phone-wrapper {
-      width: 240px;
-  }
+    .phone-wrapper {
+        width: 240px;
+    }
 
-  .screen2 {
-      width: 60px;
-      height: 120px;
-      top: 180px;
-  }
+    .screen2 {
+        width: 60px;
+        height: 120px;
+        top: 180px;
+    }
 
-  .discover-container {
-      height: 300px;
-  }
+    .discover-container {
+        height: 300px;
+    }
 
-  .discover-content h3 {
-      font-size: 24px;
-  }
-}
-
-/* ===== CORRECTIONS SPÉCIFIQUES TABLETTE ===== */
-
-/* Correction menu tablette */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  
-  /* On garde le menu horizontal normal (pas de hamburger) */
-  .hamburger {
-      display: none !important;
-  }
-
-  .menu ul {
-      position: relative;
-      left: 0;
-      width: auto;
-      height: auto;
-      background: transparent;
-      padding-top: 0;
-      flex-direction: row;
-      box-shadow: none;
-      transition: none;
-  }
-
-  .menu ul li {
-      padding: 0;
-      border-bottom: none;
-  }
-
-  .close-btn, 
-  .menu-overlay {
-      display: none !important;
-  }
-}
-
-/* Correction images activités tablette */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .card.left {
-      background-position-x: left;
-      background-size: 200% auto;
-  }
-
-  .card.right {
-      background-position-x: right;
-      background-size: 200% auto;
-  }
-}
-
-/* Correction écran téléphone expérience */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .experience-right {
-      align-items: center;
-  }
-
-  .phone-wrapper {
-      margin: 0 auto;
-  }
-
-  .screen {
-      background: #242424;
-  }
-}
-
-/* Correction grille mosaic */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .mosaic-grid img:nth-child(1) {
-      object-position: 75% center;
-  }
-
-  .mosaic-grid img:nth-child(2) {
-      object-position: 45% center;
-  }
-
-  .mosaic-grid img:nth-child(3) {
-      object-position: 75% center;
-  }
-
-  .mosaic-grid img:nth-child(4) {
-      object-position: 45% center;
-  }
-
-  .mosaic-grid img:nth-child(5) {
-      object-position: 65% center;
-  }
-}
-
-/* Ajustement espacement contenu mosaic */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .mosaic-content {
-      padding: 0 40px;
-      gap: 15px;
-  }
-
-  .mosaic-content h1 {
-      margin-bottom: 10px;
-  }
-
-  .hero-badge {
-      margin-bottom: 5px;
-  }
-
-  .hero-subtext {
-      margin-bottom: 25px;
-  }
-}
-
-/* Correction footer tablette */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .footer-left {
-      gap: 15px;
-  }
-
-  .footer-left p {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      line-height: 24px;
-  }
-
-  .copy {
-      margin: 0 5px;
-  }
+    .discover-content h3 {
+        font-size: 24px;
+    }
 }

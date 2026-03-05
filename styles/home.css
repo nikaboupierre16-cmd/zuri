@@ -1,14 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-/* navbar */
+/* ===== STYLES GLOBAUX ===== */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
-/* section activites */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== COMPOSANTS COMMUNS ===== */
+.inscription {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 10px;
+  margin: 0 auto;
+  width: 106px;
+  height: 33px;
+  background: #FFFFFF;
+  border-radius: 15px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  text-decoration: none;
+  color: black;
+  font-family: 'SF Pro Display', sans-serif;
+  margin-right: 12px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  mix-blend-mode: difference;
+}
+
+#scrollBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: black;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+#scrollBtn:hover {
+  transform: scale(1.1);
+}
+
+/* ===== SECTION ACTIVITES ===== */
 .activites {
-    width: 1228px;
-    margin: 120px auto;
-    display: flex;
-    gap: 24px;
-  }
-  
+  width: 1228px;
+  margin: 120px auto;
+  display: flex;
+  gap: 24px;
+}
+
 .card {
   flex: 1;
   border-radius: 28px;
@@ -21,18 +81,8 @@
   width: 1228px;
   height: 861.68px;
   left: 0px;
-  }
+}
 
-  /* Partie gauche */
-.left {
-  background-position-x: left;
-  }
-  
-.right {
-  background-position-x: right;
-  }
-  
-  /* overlay */
 .card::before {
   content: "";
   position: absolute;
@@ -43,25 +93,29 @@
     rgba(0,0,0,0.4) 40%,
     transparent 70%
   );
-  }
-  
-  /* contenu */
+}
+
+.card.left {
+  background-position-x: left;
+}
+
+.card.right {
+  background-position-x: right;
+}
+
 .content {
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 40px 32px;
-gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 32px;
+  gap: 20px;
+  position: absolute;
+  width: 594px;
+  height: 300px;
+  left: 0;
+  bottom: 0;
+}
 
-position: absolute;
-width: 594px;
-height: 300px;
-left: 0;
-bottom: 0;
-  
-  }
-
-  /* badge */
 .badge {
   display: flex;
   flex-direction: row;
@@ -83,41 +137,21 @@ bottom: 0;
   letter-spacing: -0.313428px;
   color: #FFFFFF;
   margin: 0;
+}
 
-  }
+.badgecontent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  width: 550px;
+  height: 162px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
 
-
-
-
-
-
-
-  .badgecontent{
-    /* Frame 237133 */
-
-/* Mise en page automatique */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 16px;
-
-width: 550px;
-height: 162px;
-
-
-/* À l'intérieur de l'auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-
-
-
-  }
-
-  /* pill */
 #marchand,
 #livreur {
   display: flex;
@@ -140,10 +174,8 @@ flex-grow: 0;
   line-height: 29px;
   letter-spacing: -0.313428px;
   color: #FFFFFF;
-  }
-  
-  
-  /* TITRE */
+}
+
 .content h2 {
   margin-top: 25px;
   width: 494px;
@@ -159,9 +191,8 @@ flex-grow: 0;
   order: 0;
   flex-grow: 0;
   margin: 0;
-  }
-  
-  /* TEXTE */
+}
+
 .content p {
   width: 458px;
   height: 42px;
@@ -176,33 +207,27 @@ flex-grow: 0;
   order: 1;
   flex-grow: 0;
   margin: 0;
-  }
+}
 
-  /* SECTION EXPERIENCE */
+/* ===== SECTION EXPERIENCE ===== */
 .experience {
-    width: 1228px;
-    margin: 120px auto;  
-    
-    
-  }
-  
+  width: 1228px;
+  margin: 120px auto;  
+}
+
 .experience-container {
-    display: flex;
-    /* align-items: flex-start; */
-    align-items: stretch;
-    /* justify-content: space-between; */
-    gap: 80px;
-  }
-  
-  /* LEFT SIDE */
-  
+  display: flex;
+  align-items: stretch;
+  gap: 80px;
+}
+
 .experience-left {
-    flex: 1;
-    display: flex;
+  flex: 1;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  }
-  
+}
+
 .experience-left h2 {
   font-family: 'SF Pro Display', sans-serif;
   font-style: normal;
@@ -211,18 +236,30 @@ flex-grow: 0;
   line-height: 48px;
   letter-spacing: -0.48px;
   color: #000000;
-  }
-  
-  /* feature cards */
-  
+}
+
 .feature {
-    background: #f2f2f2;
-    padding: 24px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-  }
-  
-.feature h4 {
+  background: #f2f2f2;
+  padding: 24px;
+  border-radius: 20px;
+  margin-bottom: 20px; 
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.feature:last-child {
+  margin-bottom: 0;
+}
+
+.feature:hover {
+  background: #ffffff;
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  border: 1px solid #e5e5e5;
+}
+
+.feature h2 {
   margin-bottom: 10px;
   font-family: 'SF Pro Display', sans-serif;
   font-style: normal;
@@ -234,8 +271,12 @@ flex-grow: 0;
   flex: none;
   order: 0;
   flex-grow: 0;
-  }
-  
+}
+
+.feature:hover h2 {
+  color: #000;
+}
+
 .feature p {
   line-height: 1.6;
   font-family: 'SF Pro Display', sans-serif;
@@ -248,147 +289,78 @@ flex-grow: 0;
   flex: none;
   order: 1;
   flex-grow: 0;
-  }
-  
-  /* RIGHT SIDE */  
-.experience-right {
-    flex: 1;
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-  }
-  
-.experience-right img {
-    width: 320px;
+}
 
-    
-  }
-  
-  
-.feature {
-    background: #f2f2f2;
-    padding: 24px;
-    border-radius: 20px;
-    margin-bottom: 20px; 
-    transition: all 0.3s ease; /* animation fluide */
-    cursor: pointer;
-  }
-
-  /* HOVER EFFECT */
-.feature:hover {
-    background: #ffffff;
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-  }
-  
-
-
-.feature:hover h4 {
-    color: #000;
-  }
-  
 .feature:hover p {
-    color: #444;
-  }
+  color: #444;
+}
 
-.feature {
-    border: 1px solid transparent;
-  }
-  
-.feature:hover {
-    border: 1px solid #e5e5e5;
-  }
-  
 .experience-right {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-  }
-  
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.experience-right img {
+  width: 320px;
+}
+
 .phone-wrapper {
-    position: relative;
-    width: 320px;
-    /* height: 100%; */
-    align-items: center;
-    display: flex;
-  }
-  
-  /* écran noir derrière */
+  position: relative;
+  width: 320px;
+  align-items: center;
+  display: flex;
+}
+
 .screen {
-    position: absolute;
-    top: 14px;     /* ajuste si besoin */
-    left: 16px;    /* ajuste si besoin */
-    right: 18px;   /* ajuste si besoin */
-    bottom: 17px;  /* ajuste si besoin */
-    background: #242424;
-    border-radius: 30px;
-    z-index: 1;
-  }
-  
-  /* image au-dessus */
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  right: 18px;
+  bottom: 17px;
+  background: #242424;
+  border-radius: 30px;
+  z-index: 1;
+}
+
 .phone-wrapper img {
-    width: 100%;
-    position: relative;
-    z-index: 2; 
-    margin-top: 0;  
-    height: 100%;
-    /* max-height: 1520px;  */
-  }
+  width: 100%;
+  position: relative;
+  z-index: 2; 
+  margin-top: 0;  
+  height: 100%;
+}
 
 .image-with-phone {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  
-.image-with-phone img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .feature:last-child {
-    margin-bottom: 0;
-  }
-  
-.screen2 {
-    position: absolute;
-    /* width: 82px;  
-    height: 170px;  */
-    width: 70px;  
-    height: 138px;
-    background: url(../images/fond_phone.png);
-    background-size: cover;
-    border-radius: 10px; /* Coins arrondis comme un écran de téléphone */
-    /* Position à ajuster précisément sur le téléphone */
-    /* top: 246px;    
-    left: 25px;    */
-    top: 218px;    
-    left: 34px; 
-    /* Si besoin de rotation */
-    transform: rotate(1deg);    
-    z-index: 1;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    
-
-   
-
-    /* transform: rotate(0.2deg); */
-  }
-  
-  /*hero-mosaic  */
-
-/* Retire les marges par défaut du navigateur sur le body */
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Évite un scroll horizontal indésirable */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
-/* --- SECTION HERO-MOSAIC --- */
 
+.image-with-phone img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
+.screen2 {
+  position: absolute;
+  width: 70px;  
+  height: 138px;
+  background: url(../images/fond_phone.png);
+  background-size: cover;
+  border-radius: 10px;
+  top: 218px;    
+  left: 34px; 
+  transform: rotate(1deg);    
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* ===== SECTION HERO MOSAIC ===== */
 .hero-mosaic {
   width: 100%;
   height: 520px;
@@ -401,6 +373,21 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+}
+
+.mosaic-grid {
+  display: grid;
+  grid-template-columns: 0.2fr 0.6fr 0.8fr 0.6fr 0.1fr;
+  width: 100%;
+  height: 100%;
+  gap: 0;
+}
+
+.mosaic-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .mosaic-item {
@@ -437,25 +424,6 @@ body {
   background-position: 60% center;
 }
 
-.mosaic-grid {
-  display: grid;
-  /* Layout exact comme dans Figma : proportions variées */
-  grid-template-columns: 0.2fr 0.6fr 0.8fr 0.6fr 0.1fr;
-  width: 100%;
-  height: 100%;
-  gap: 0;
-}
-
-.mosaic-grid img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-
-
-/* Overlay plus subtil */
 .mosaic-overlay {
   position: absolute;
   inset: 0;
@@ -467,7 +435,6 @@ body {
   z-index: 1;
 }
 
-/* Contenu centré */
 .mosaic-content {
   position: absolute;
   inset: 0;
@@ -481,7 +448,7 @@ body {
   padding: 0 20px;
 }
 
-.mosaic-content h1 {
+.mosaic-content h2 {
   font-family: 'SF Pro Display', sans-serif;
   font-size: 56px;
   font-weight: 500;
@@ -496,50 +463,35 @@ body {
   margin-bottom: 0px;
   opacity: 0.9;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-
-  /* + 1000 Marchands nous ont déjà rejoint, */
-
-/* position: absolute; */
-width: 484px;
-height: 29px;
-top: 254px;
-
-font-family: 'SF Pro Display', sans-serif;
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 29px;
-/* identique à la hauteur de la zone de texte */
-text-align: center;
-letter-spacing: -0.48px;
-
-color: #FFFFFF;
-
-
+  width: 484px;
+  height: 29px;
+  top: 254px;
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: -0.48px;
+  color: #FFFFFF;
 }
 
 .hero-subtext {
   font-size: 18px;
-  /* max-width: 700px; */
-  /* line-height: 1.4; */
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 40px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-width: 890px;
-height: 75px;
-top: 293px;
-
-font-family: 'SF Pro Display', sans-serif;
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 29px;
-text-align: center;
-letter-spacing: -0.48px;
-
-color: rgba(255, 255, 255, 0.7);
-
-
+  width: 890px;
+  height: 75px;
+  top: 293px;
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: -0.48px;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .cta-button {
@@ -558,11 +510,8 @@ color: rgba(255, 255, 255, 0.7);
 .cta-button:hover {
   transform: scale(1.05);
 }
-  
 
-  /* faq */
-
-/* FAQ avec réponses interactives */
+/* ===== SECTION FAQ ===== */
 .faq {
   width: 1228px;
   margin: 120px auto;
@@ -579,16 +528,16 @@ color: rgba(255, 255, 255, 0.7);
   margin-bottom: 30px;
 }
 
-.faq-item {
-  border-bottom: 1px solid #e5e5e5;
-  cursor: pointer;
-}
-
 .faq-list {
   list-style: none;
   padding: 0;
   margin: 0;
   width: 100%;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
 }
 
 .faq-question {
@@ -629,7 +578,7 @@ color: rgba(255, 255, 255, 0.7);
 }
 
 .faq-item.active .faq-reponse {
-  max-height: 200px; /* Ajustez selon la longueur de vos réponses */
+  max-height: 200px;
   padding: 0 20px 20px 20px;
 }
 
@@ -643,9 +592,7 @@ color: rgba(255, 255, 255, 0.7);
   margin: 0;
 }
 
-
-/* discover - corrigé */
-
+/* ===== SECTION DISCOVER ===== */
 .discover {
   width: 1228px;
   margin: 120px auto;
@@ -655,30 +602,24 @@ color: rgba(255, 255, 255, 0.7);
 .discover-container {
   display: flex;
   gap: 24px;
-  height: 400px; /* Hauteur fixe comme dans Figma */
+  height: 400px;
 }
 
 .discover-card {
   flex: 1;
-  border-radius: 28px; /* Coins plus arrondis comme dans l'image */
+  border-radius: 28px;
   overflow: hidden;
   position: relative;
-  background-color: #000; /* Fallback */
-}
-
-/* Conteneurs d'images */
-#imagecommercant,
-#imagelivreur,
-#imagevtc {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.discover-card {
+  background-color: #000;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  transition: all 0.3s ease;
+}
+
+.discover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .discover-commercant {
@@ -703,30 +644,22 @@ color: rgba(255, 255, 255, 0.7);
   transition: transform 0.5s ease;
 }
 
-/* Effet de zoom au survol */
 .discover-card:hover img {
   transform: scale(1.05);
 }
 
-/* Overlay plus sophistiqué - dégradé du bas vers le haut */
 .discover-overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
-  pointer-events: none; /* Permet de cliquer à travers */
-
-
-  /* Rectangle 3467561 */
-width: 410px;
-height: 429px;
-left: -1px;
-top: 0px;
-
-background: linear-gradient(190.23deg, rgba(0, 0, 0, 0) 7.07%, rgba(20, 20, 20, 0.65) 52.12%, #141414 92.36%);
-
+  pointer-events: none;
+  width: 410px;
+  height: 429px;
+  left: -1px;
+  top: 0px;
+  background: linear-gradient(190.23deg, rgba(0, 0, 0, 0) 7.07%, rgba(20, 20, 20, 0.65) 52.12%, #141414 92.36%);
 }
 
-/* Contenu textuel */
 .discover-content {
   position: absolute;
   bottom: 20px;
@@ -735,21 +668,17 @@ background: linear-gradient(190.23deg, rgba(0, 0, 0, 0) 7.07%, rgba(20, 20, 20, 
   color: white;
   z-index: 2;
   text-align: center;
-  
 }
 
-.discover-content h3 {
+.discover-content h2 {
   font-family: 'SF Pro Display', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 32px; /* Plus grand comme dans Figma */
+  font-size: 32px;
   line-height: 1.2;
   letter-spacing: -0.5px;
-  /* margin-bottom: 20px; */
   color: #FFFFFF;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-
-  
 }
 
 .discover-content a {
@@ -764,7 +693,7 @@ background: linear-gradient(190.23deg, rgba(0, 0, 0, 0) 7.07%, rgba(20, 20, 20, 
   padding: 12px 24px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 40px; /* Bouton très arrondi */
+  border-radius: 40px;
   backdrop-filter: blur(5px);
   transition: all 0.3s ease;
 }
@@ -775,26 +704,18 @@ background: linear-gradient(190.23deg, rgba(0, 0, 0, 0) 7.07%, rgba(20, 20, 20, 
   transform: translateY(-2px);
 }
 
-/* Styles spécifiques pour chaque image (optionnel) */
 #imagecommercant img {
-  /* object-position: center */
   object-position: 40% center;
 }
 
 #imagelivreur img {
-  /* object-position: center 40%;
-   */
-   object-position: 90% center;
+  object-position: 90% center;
 }
 
 #imagevtc img {
   object-position: center 20%;
 }
 
- 
-
-
-/* Pour un effet "glassmorphisme" sur les badges (si présents dans Figma) */
 .discover-badge {
   position: absolute;
   top: 20px;
@@ -809,619 +730,266 @@ background: linear-gradient(190.23deg, rgba(0, 0, 0, 0) 7.07%, rgba(20, 20, 20, 
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Animation au survol plus fluide */
-.discover-card {
-  transition: all 0.3s ease;
-}
-
-.discover-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-
- 
-
-
-
-  #scrollBtn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    background: black;
-    color: white;
-    font-size: 22px;
-    cursor: pointer;
-    z-index: 999;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-  }
-  
-  #scrollBtn:hover {
-    transform: scale(1.1);
-  }
-
-
-
-
-   /* RESPONSIVE MOBILE */
-   @media screen and (max-width: 768px) {
-    /* Navbar mobile */
-    .navbar {
-        /* padding: 10px 16px; */
-        height: auto;
-        position: fixed;
-        background: rgba(255, 255, 255, 255);
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 10px 5px;
-    }
-    .menu {
-        width: 100%;
-        gap: 15px;
-        flex-wrap: wrap;
-        mix-blend-mode: normal;
-     
-    }
-    .logo img { 
-      height: 30px; 
-      width: auto; 
-      mix-blend-mode: difference;
-    }
-    /* ul {
-        order: 3;
-        width: 100%;
-        justify-content: center;
-        gap: 20px;
-        height: auto;
-    } */
-
-    .menu > ul {
-      order: 3;
-      width: 100%;
-      justify-content: center;
-      gap: 20px;
-  }
-
-    .commerçant, .livreur, .vtc { color: #000; } /* lisibilité sur fond blanc */
-    .inscription {
-        margin-left: 14%;
-        order: 2;
-        width: auto;
-        padding: 6px 20px;
-    }
-
-    
-
-    /* Activités */
-    .activites {
-        width: 100%;
-        flex-direction: column;
-        margin: 40px auto;
-        gap: 16px;
-        padding: 0 16px;
-        margin-top: 120px;
-    }
-    
-    .card {
-        width: 100%;
-        height: 500px;
-        background-size: cover;
-    }
-    .content {
-        width: 100%;
-        /* height: auto; */
-        height:65%;
-        padding: 30px 20px;
-    }
-    .badge {
-        width: auto;
-        font-size: 18px;
-        height: auto;
-        padding: 6px 12px;
-    }
-    #marchand, #livreur {
-        font-size: 18px;
-        width: auto;
-        height: auto;
-    }
-    .badgecontent {
-        width: 100%;
-        height: auto;
-    }
-    .content h2 {
-        width: 100%;
-        height: auto;
-        font-size: 36px;
-        line-height: 42px;
-    }
-    .content p {
-        width: 100%;
-        height: auto;
-        font-size: 16px;
-        line-height: 22px;
-    }
-
-    /* Experience */
-    .experience {
-        width: 100%;
-        margin: 60px auto;
-        padding: 0 16px;
-    }
-    .experience-container {
-        flex-direction: column;
-        gap: 40px;
-    }
-    .experience-left h2 {
-        font-size: 32px;
-        line-height: 40px;
-    }
-    .feature h4 { font-size: 20px; }
-    .feature p { font-size: 16px; }
-    
-
-   
-
-    /* FAQ */
-    .faq {
-        width: 100%;
-        margin: 60px auto;
-        margin-top: 80px;
-        padding: 0 16px;
-    }
-
-    /* Discover */
-    .discover {
-        width: 100%;
-        margin: 60px auto;
-        margin-top: 80px;
-        padding: 0 16px;
-    }
-    .discover-container {
-      flex-direction: column;
-      gap: 16px;
-      height: auto;
-    }
-  
-    .discover-card {
-      height: 250px; 
-      border-radius: 24px;
-    }
-  
-    .discover-card img {
-      object-fit: cover;
-    }
-
-
-
-  
-    /* Overlay  */
-    .discover-overlay {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        180deg,
-        rgba(0,0,0,0) 20%,
-        rgba(0,0,0,0.6) 60%,
-        rgba(0,0,0,0.9) 100%
-      );
-    }
-  
-    .discover-content h3 {
-      font-size: 22px;
-    }
-  
-    .discover-content a {
-      font-size: 16px;
-      padding: 8px 18px;
-    }
-
-    /* Footer */
-    .footer-container {
-        flex-direction: column;
-        gap: 30px;
-        align-items: center;
-        text-align: center;
-    }
-    .footer-left { align-items: center; }
-    .footer-right {
-        align-items: center;
-        width: 100%;
-        gap: 20px;
-    }
-    .footer-links { justify-content: center; }
-}
-
-/* Très petits écrans */
-@media screen and (max-width: 480px) {
-    .content h2 { font-size: 28px; line-height: 34px; }
-    .badge { font-size: 16px; }
-    .mosaic-content h1 { font-size: 28px; }
-    .hero-subtext { font-size: 14px; }
-    .discover-content h3 { font-size: 24px; }
-    .discover-content a { font-size: 18px; }
-}
-
-
-
-
-/* Images de fond des activités */
+/* ===== MEDIA QUERIES MOBILE (max-width: 768px) ===== */
 @media screen and (max-width: 768px) {
   
-  .card.left {
-      background-image: url('images/marchand.jpg') !important;
-      background-size: cover !important;
-      background-position: center !important;
-      display: block !important;
+  /* Global */
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
   }
   
+  /* Activités */
+  .activites {
+    width: 100%;
+    flex-direction: column;
+    margin: 40px auto;
+    gap: 16px;
+    padding: 0 16px;
+    margin-top: 120px;
+  }
+  
+  .card {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    opacity: 1 !important;
+    min-height: 400px !important;
+  }
+  
+  .card.left,
   .card.right {
-      background-image: url('images/marchand.jpg') !important;
-      background-size: cover !important;
-      background-position: center !important;
-      display: block !important;
+    background-image: url('images/marchand.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    display: block !important;
   }
   
- 
-  .logo img[src="images/Vector.png"],
-  .logo img[src="images/zuri_name.png"] {
-      display: inline-block !important;
-      visibility: visible !important;
-      opacity: 1 !important;
+  .content {
+    width: 100%;
+    height: 65%;
+    padding: 30px 20px;
   }
   
-  /* Force l'affichage des conteneurs */
-  .card {
-      opacity: 1 !important;
-      min-height: 400px !important;
-  }
-}
-
-
-@media screen and (max-width: 768px) {
-  
-
-  
-  /* Alternative : si "content" ne marche pas, décommentez ceci :
-  .logo a img[src="images/zuri_name.png"] {
-      src: url('images/zuri_name.png') !important;
-  }
-  */
-  
-  /* 2. LA CARTE ACTIVITÉS (une seule image coupée) */
-  .activites .card {
-      background-image: url('images/marchand.jpg') !important;
-      background-size: 200% auto !important; /* Garde le même effet de coupure */
-      background-repeat: no-repeat !important;
-      height: 400px !important;
-        
-        background-position: center 80%; /* descend l’image */
+  .badge {
+    width: auto;
+    font-size: 18px;
+    height: auto;
+    padding: 6px 12px;
   }
   
-  .activites .card.left {
-      /* background-position: left bottom !important; */
-      background-position: left 55% !important;
+  #marchand, #livreur {
+    font-size: 18px;
+    width: auto;
+    height: auto;
   }
   
-  .activites .card.right {
-      background-position: right 55% !important;
+  .badgecontent {
+    width: 100%;
+    height: auto;
   }
   
-  
-  
-  /* 4. images dans la grille mosaic */
-  .mosaic-grid img {
-      src: attr(src) !important; 
+  .content h2 {
+    width: 100%;
+    height: auto;
+    font-size: 36px;
+    line-height: 42px;
   }
-}
-
-
-
-
-/* BOUTON HAMBURGER (créé en JS) */
-.hamburger {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-  color: white;
-}
-
-/* MENU MOBILE */
-@media screen and (max-width: 768px) {
-
-  .menu {
-    position: relative;
-  }
-
-
-
   
-
-  .menu ul li {
-    padding: 15px 20px;
-    border-bottom: 1px solid #eee;
-    text-align: left;
-  }
-
-  .menu ul li a {
-    color: black;
+  .content p {
+    width: 100%;
+    height: auto;
     font-size: 16px;
+    line-height: 22px;
   }
-
- 
-
-  .hamburger {
-    display: block;
+  
+  /* Experience */
+  .experience {
+    width: 100%;
+    margin: 60px auto;
+    padding: 0 16px;
   }
-
-  /* centre le logo sur mobile */
-  .menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  
+  .experience-container {
+    flex-direction: column;
+    gap: 40px;
   }
-
-  .logo {
-    /* margin: 0 auto; */
+  
+  .experience-left h2 {
+    font-size: 32px;
+    line-height: 40px;
   }
-
-  /* agrandir le logo */
-  .logo img:first-child {
-    /* width: 28px; */
-    height: 30px;
-    
-  }
-
-  .logo img:last-child {
-    /* height: 22px; */
-    height: 22px;
-    
-  }
-}
-
-
-/* NAVBAR AU-DESSUS DE TOUT */
-.navbar {
-  z-index: 1000;
-}
-
-/* MENU MOBILE AU-DESSUS DES CARTES */
-@media screen and (max-width: 768px) {
-
-  .menu ul {
-    z-index: 999;
-  }
-
-  /* Optionnel mais recommandé */
-  .activites,
-  .card {
-    position: relative;
-    z-index: 1;
-  }
-
-
- 
-}
-
-
-
-
-
-
-@media screen and (max-width: 768px) {
+  
+  .feature h4 { font-size: 20px; }
+  .feature p { font-size: 16px; }
   
   .phone-wrapper {
     position: relative;
-    width: 280px; /* Largeur fixe du téléphone */
+    width: 280px;
     margin: 0 auto;
   }
   
   .screen {
     position: absolute;
-    width: 249px;  /* Largeur de l'écran */
-    height: 485px; /* Hauteur de l'écran */
+    width: 249px;
+    height: 485px;
     background: #242424;
     border-radius: 30px;
-    top: 13px;     /* Position verticale */
-    left: 15px;    /* Position horizontale */
+    top: 13px;
+    left: 15px;
     z-index: 1;
   }
-}
-
-
-
-
-
-/* MENU MOBILE OFFCANVAS */
-@media screen and (max-width: 768px) {
-
-
-
-
-
-    /* HERO MOSAIC */
-    @media screen and (max-width: 768px) {
-
-      .hero-mosaic {
-        height: 300px;
-      }
-    
-      .mosaic-content {
-        padding: 0 16px;
-        gap: 8px; /* espace contrôlé entre les éléments */
-        margin-top: 50px;
-      }
-    
-      .mosaic-content h1 {
-        font-size: 22px;
-        margin: 0;
-        line-height: 1.2;
-      }
-    
-      .hero-badge {
-        font-size: 12px;
-        margin: 0;
-        line-height: 16px;
-      }
-    
-      .hero-subtext {
-        font-size: 13px;
-        margin: 0;
-        line-height: 18px;
-        width: 100%;
-      }
-    
-      .cta-button {
-        /* margin: 10px 0 0 0;  */
-        padding: 8px 18px;
-        font-size: 12px;
-      }
-    
-
-
-      
-    }
-
-
-
-    @media screen and (max-width: 768px) {
-
-
-      .mosaic-grid {
-        grid-template-columns: 0.4fr 0.8fr 0.8fr 0.6fr 0.2fr;
-      }
-
-      .mosaic-grid img:nth-child(1) {
-        object-position: 80% center; /* gauche/droite */
-        /* transform: scaleX(1.1); */
-
-      }
-    
-      .mosaic-grid img:nth-child(2) {
-        /* object-position: 30% center; */
-      }
-    
-      .mosaic-grid img:nth-child(3) {
-        /* object-position: center top;  */
-      }
-    
-      .mosaic-grid img:nth-child(4) {
-        object-position: center 70%;
-      }
-    
-      .mosaic-grid img:nth-child(5) {
-        object-position: 60% center;
-      }
-    
-    }
-
-
-
-@media screen and (max-width: 768px) {
   
-  html, body {
-    max-width: 100%;
-    overflow-x: hidden;
+  .screen2 {
+    width: 70%;
+    height: 29%;
+    top: 41.09%;
+    left: 10%;
+    background: url(images/fond_phone.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+    z-index: 1;
   }
-
-  * {
-    box-sizing: border-box;
+  
+  /* Hero Mosaic */
+  .hero-mosaic {
+    height: 300px;
   }
-
-}
-
-.inscription{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 24px;
-  gap: 10px;
-  margin: 0 auto;
-  width: 106px;
-  height: 33px;
-  background: #FFFFFF;
-  border-radius: 15px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  text-decoration: none;
-  /* margin-left: 53%; */
-  color: black;
-  font-family: 'SF Pro Display', sans-serif;
-  margin-right: 12px;
-
-
-
-  /* S’inscrire */
-
-/* width: 58px;
-height: 17px; */
-
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 17px;
-/* identique à la hauteur de la zone de texte */
-
-/* color: #000000; */
-
-mix-blend-mode: difference;
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* MOBILE MENU OFFCANVAS CLEAN  */
-
-@media screen and (max-width: 768px) {
-
-  /* Empêche scroll horizontal */
-  html, body {
-    overflow-x: hidden;
+  
+  .mosaic-grid {
+    grid-template-columns: 0.4fr 0.8fr 0.8fr 0.6fr 0.2fr;
   }
-
-  /* Cache menu normal */
+  
+  .mosaic-grid img:nth-child(1) {
+    object-position: 80% center;
+  }
+  
+  .mosaic-grid img:nth-child(4) {
+    object-position: center 70%;
+  }
+  
+  .mosaic-grid img:nth-child(5) {
+    object-position: 60% center;
+  }
+  
+  .mosaic-content {
+    padding: 0 16px;
+    gap: 8px;
+    margin-top: 50px;
+  }
+  
+  .mosaic-content h1 {
+    font-size: 22px;
+    margin: 0;
+    line-height: 1.2;
+  }
+  
+  .hero-badge {
+    font-size: 12px;
+    margin: 0;
+    line-height: 16px;
+  }
+  
+  .hero-subtext {
+    font-size: 13px;
+    margin: 0;
+    line-height: 18px;
+    width: 100%;
+  }
+  
+  .cta-button {
+    padding: 8px 18px;
+    font-size: 12px;
+  }
+  
+  /* FAQ */
+  .faq {
+    width: 100%;
+    margin: 60px auto;
+    margin-top: 80px;
+    padding: 0 16px;
+  }
+  
+  /* Discover */
+  .discover {
+    width: 100%;
+    margin: 60px auto;
+    margin-top: 80px;
+    padding: 0 16px;
+  }
+  
+  .discover-container {
+    flex-direction: column;
+    gap: 16px;
+    height: auto;
+  }
+  
+  .discover-card {
+    height: 250px;
+    border-radius: 24px;
+  }
+  
+  .discover-card img {
+    object-fit: cover;
+  }
+  
+  .discover-overlay {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(0,0,0,0) 20%,
+      rgba(0,0,0,0.6) 60%,
+      rgba(0,0,0,0.9) 100%
+    );
+  }
+  
+  .discover-content h3 {
+    font-size: 22px;
+  }
+  
+  .discover-content a {
+    font-size: 16px;
+    padding: 8px 18px;
+  }
+  
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-left { align-items: center; }
+  .footer-right {
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+  
+  .footer-links { justify-content: center; }
+  
+  /* Logo */
+  .logo img:first-child,
+  .logo img:last-child {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .logo img:first-child { height: 30px; }
+  .logo img:last-child { height: 22px; }
+  
+  /* Menu Mobile */
+  .menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
   .menu ul {
     position: fixed;
     top: 0;
@@ -1436,96 +1004,26 @@ mix-blend-mode: difference;
     transition: 0.35s ease;
     z-index: 5000;
     box-shadow: 5px 0 25px rgba(0,0,0,0.08);
-
-    /* position: fixed;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100vh;
-    background: #ffffff;
-    display: flex;
-    flex-direction: column;
-    padding-top: 20px;
-    transition: 0.35s ease;
-    z-index: 5000; */
- 
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0;
   }
-
-  .menu ul.active ~ .hamburger {
-    display: none;
-  }
-
-  /* Quand actif */
+  
   .menu ul.active {
     left: 0;
   }
-
-
-  .menu ul .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 20px 25px;
-  }
   
-  .close-btn {
-    /* position: absolute;
-    top: 20px;
-    font-size: 24px;
-    margin-bottom: 25px; */
-  }
-
-
-  @media screen and (max-width: 768px) {
-
-    .menu-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      /* padding: 20px 25px; */
-      border-bottom: 1px solid #f1f1f1;
-      flex-direction: row-reverse;
-     gap: 30%;
-     padding-bottom: 20px;
-     
-    }
-  
-    .menu-logo {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-  
-    .menu-logo img:first-child {
-      height: 30px;
-      mix-blend-mode: difference;
-    }
-  
-    .menu-logo img:last-child {
-      height: 20px;
-      mix-blend-mode: difference;
-    }
-  
-  }
-  
-
-  /* Liens */
   .menu ul li {
     padding: 14px 25px;
     border-bottom: 1px solid #f1f1f1;
+    width: 100%;
   }
-
+  
   .menu ul li a {
     font-size: 18px;
     color: #111;
   }
-
-  .menu ul {
-    justify-content: flex-start;  /* important */
-    align-items: flex-start;      /* important */
-}
-
-  /* Hamburger */
+  
   .hamburger {
     display: block;
     font-size: 26px;
@@ -1533,16 +1031,13 @@ mix-blend-mode: difference;
     color: black;
     z-index: 6000;
   }
-
-  /* Bouton fermer */
+  
   .close-btn {
     position: relative;
-    /* top: 25px; */
     font-size: 26px;
     cursor: pointer;
   }
-
-  /* Overlay sombre derrière */
+  
   .menu-overlay {
     position: fixed;
     inset: 0;
@@ -1552,558 +1047,453 @@ mix-blend-mode: difference;
     transition: 0.3s ease;
     z-index: 4000;
   }
-
+  
   .menu-overlay.active {
     opacity: 1;
     pointer-events: auto;
   }
-
-
-  .menu ul {
-    height: 100vh;      /* force la bonne hauteur */
-    gap: 0;             /* enlève espace horizontal */
-  }
-
-
-  ul {
-    height: auto;   /* remplace le height:17px */
-  }
-
-}
-
-
-
-@media screen and (max-width: 768px) {
-
-  .screen2 {
-    /* position: absolute; */
-    width: 70%;
-    height: 29%;
-
-    top: 41.09%;
-    left: 10%;
-
-    background: url(images/fond_phone.png);
-    background-size: cover;
-    background-position: center;
-
-    border-radius: 6px;
-    z-index: 1;
-
   
+  .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 30%;
+    padding-bottom: 20px;
   }
-
+  
+  .menu-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .menu-logo img:first-child {
+    height: 30px;
+    mix-blend-mode: difference;
+  }
+  
+  .menu-logo img:last-child {
+    height: 20px;
+    mix-blend-mode: difference;
+  }
 }
 
+/* ===== TRES PETITS ECRANS (max-width: 480px) ===== */
+@media screen and (max-width: 480px) {
+  .content h2 { font-size: 28px; line-height: 34px; }
+  .badge { font-size: 16px; }
+  .mosaic-content h1 { font-size: 28px; }
+  .hero-subtext { font-size: 14px; }
+  .discover-content h3 { font-size: 24px; }
+  .discover-content a { font-size: 18px; }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*  RESPONSIVE TABLETTE (768px - 1024px)  */
+/* ===== MEDIA QUERIES TABLETTE (769px - 1024px) ===== */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    
-  /* Layout général */
+  
+  /* Global */
   body {
-      overflow-x: hidden;
+    overflow-x: hidden;
   }
-
-  /* NAVBAR TABLETTE */
+  
+  /* Navbar */
   .navbar {
-      width: 100%;
-      padding: 8px 24px;
-      left: 0;
-      position: fixed;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-      
+    width: 100%;
+    padding: 8px 24px;
+    left: 0;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
   }
-
+  
   .menu {
-      width: 100%;
-      gap: 24px;
+    width: 100%;
+    gap: 24px;
   }
-
+  
   .logo img {
-      height: 35px;
+    height: 35px;
   }
-
+  
   .logo img:last-child {
-      height: 25px;
+    height: 25px;
   }
-
+  
   .menu ul {
-      gap: 24px;
-      margin-left: 20px;
+    position: relative;
+    left: 0;
+    width: auto;
+    height: auto;
+    background: transparent;
+    padding-top: 0;
+    flex-direction: row;
+    box-shadow: none;
+    transition: none;
+    gap: 24px;
+    margin-left: 20px;
   }
-
+  
+  .menu ul li {
+    padding: 0;
+    border-bottom: none;
+  }
+  
   .menu ul li a {
-      color: #FFFFFF;
-      font-size: 15px;
+    color: #FFFFFF;
+    font-size: 15px;
   }
-
+  
   .inscription {
-      margin-left: auto;
-      /* margin-right: 0; */
-      width: auto;
-      padding: 8px 20px;
-      background: #FFFFFF;
-      color: #000000;
-      border-radius: 25px;
-      margin-right: 35px;
+    margin-left: auto;
+    width: auto;
+    padding: 8px 20px;
+    background: #FFFFFF;
+    color: #000000;
+    border-radius: 25px;
+    margin-right: 35px;
   }
-
-  /* ACTIVITES TABLETTE */
+  
+  .hamburger,
+  .close-btn,
+  .menu-overlay {
+    display: none !important;
+  }
+  
+  /* Activités */
   .activites {
-      width: 90%;
-      margin: 140px auto 80px;
-      gap: 20px;
+    width: 90%;
+    margin: 140px auto 80px;
+    gap: 20px;
   }
-
+  
   .card {
-      height: 600px;
-      background-size: 200% auto;
+    height: 600px;
+    background-size: 200% auto;
   }
-
+  
+  .card.left {
+    background-position-x: left;
+  }
+  
+  .card.right {
+    background-position-x: right;
+  }
+  
   .content {
-      width: 100%;
-      height: auto;
-      padding: 30px 24px;
+    width: 100%;
+    height: auto;
+    padding: 30px 24px;
   }
-
+  
   .badge {
-      width: auto;
-      font-size: 20px;
-      padding: 6px 12px;
+    width: auto;
+    font-size: 20px;
+    padding: 6px 12px;
   }
-
+  
   #marchand, #livreur {
-      font-size: 20px;
-      width: auto;
-      padding: 2px 12px;
+    font-size: 20px;
+    width: auto;
+    padding: 2px 12px;
   }
-
+  
   .content h2 {
-      width: 100%;
-      font-size: 42px;
-      line-height: 48px;
+    width: 100%;
+    font-size: 42px;
+    line-height: 48px;
   }
-
+  
   .content p {
-      width: 60%;
-      font-size: 17px;
-      line-height: 24px;
+    width: 60%;
+    font-size: 17px;
+    line-height: 24px;
   }
-
-  /* EXPERIENCE TABLETTE */
+  
+  /* Experience */
   .experience {
-      width: 90%;
-      margin: 80px auto;
+    width: 90%;
+    margin: 80px auto;
   }
-
+  
   .experience-container {
-      gap: 40px;
+    gap: 40px;
   }
-
+  
   .experience-left h2 {
-      font-size: 36px;
-      line-height: 44px;
-      margin-bottom: 30px;
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 30px;
   }
-
+  
   .feature {
-      padding: 22px;
+    padding: 22px;
   }
-
+  
   .feature h4 {
-      font-size: 22px;
+    font-size: 22px;
   }
-
+  
   .feature p {
-      font-size: 16px;
+    font-size: 16px;
   }
-
-  /* Téléphone dans section expérience */
+  
   .phone-wrapper {
-      width: 280px;
+    width: 280px;
+    margin: 0 auto;
   }
-
+  
   .screen {
-      top: 11px;
-      left: 13px;
-      right: 13px;
-      bottom: 10px;
-      border-radius: 25px;
+    top: 11px;
+    left: 13px;
+    right: 13px;
+    bottom: 10px;
+    border-radius: 25px;
+    background: #242424;
   }
-
+  
   .screen2 {
-      width: 70px;
-      height: 140px;
-      /* top: 212px;
-      left: 22px; */
-
-      top: 183px;
-      left: 8px;
-      
+    width: 70px;
+    height: 140px;
+    top: 183px;
+    left: 8px;
   }
-
-  /* HERO MOSAIC TABLETTE */
+  
+  .experience-right {
+    align-items: center;
+  }
+  
+  /* Hero Mosaic */
   .hero-mosaic {
-      height: 450px;
-      margin: 60px 0;
+    height: 450px;
+    margin: 60px 0;
   }
-
+  
   .mosaic-grid {
-      grid-template-columns: 0.4fr 1.6fr 1.6fr 0.7fr 0.2fr;
+    grid-template-columns: 0.4fr 1.6fr 1.6fr 0.7fr 0.2fr;
   }
-
- 
-    /* CORRECTION: Image 1 poussée VERS LA GAUCHE */
-    .mosaic-grid img:nth-child(1) {
-      object-position: 80% center !important; /* Pousse à gauche (20% au lieu de 75%) */
-      transform: scale(1.2);
-      /* object-fit: cover; */
+  
+  .mosaic-grid img:nth-child(1) {
+    object-position: 75% center;
+    transform: scale(1.2);
   }
-
-  /* Image 2 */
+  
   .mosaic-grid img:nth-child(2) {
-      object-position: 40% center;
-      transform: scaleX(-1);
+    object-position: 45% center;
+    transform: scaleX(-1);
   }
-
-  /* Image 3 */
+  
   .mosaic-grid img:nth-child(3) {
-      object-position: 75% center;
+    object-position: 75% center;
   }
-
-  /* Image 4 */
+  
   .mosaic-grid img:nth-child(4) {
-      object-position: 45% center;
+    object-position: 45% center;
   }
-
-  /* Image 5 */
+  
   .mosaic-grid img:nth-child(5) {
-      object-position: 65% center;
+    object-position: 65% center;
   }
-
+  
+  .mosaic-content {
+    padding: 0 40px;
+    gap: 15px;
+  }
+  
   .mosaic-content h1 {
-      font-size: 42px;
-      max-width: 700px;
+    font-size: 42px;
+    max-width: 700px;
+    margin-bottom: 10px;
   }
-
+  
   .hero-badge {
-      font-size: 20px;
-      width: auto;
+    font-size: 20px;
+    width: auto;
+    margin-bottom: 5px;
   }
-
+  
   .hero-subtext {
-      font-size: 18px;
-      width: 80%;
-      max-width: 700px;
-      height: auto;
-      margin: 15px auto;
+    font-size: 18px;
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+    margin: 15px auto 25px;
   }
-
+  
   .cta-button {
-      padding: 14px 35px;
-      font-size: 16px;
+    padding: 14px 35px;
+    font-size: 16px;
   }
-
-  /* FAQ TABLETTE */
+  
+  /* FAQ */
   .faq {
-      width: 90%;
-      margin: 80px auto;
-      margin-top: 100px;
+    width: 90%;
+    margin: 80px auto;
+    margin-top: 100px;
   }
-
+  
   .faq h2 {
-      font-size: 28px;
-      margin-bottom: 40px;
+    font-size: 28px;
+    margin-bottom: 40px;
   }
-
+  
   .faq-question {
-      font-size: 18px;
-      padding: 20px 0;
+    font-size: 18px;
+    padding: 20px 0;
   }
-
+  
   .faq-reponse p {
-      font-size: 16px;
+    font-size: 16px;
   }
-
-  /* DISCOVER TABLETTE */
+  
+  /* Discover */
   .discover {
-      width: 90%;
-      margin: 80px auto;
-      margin-top: 100px;
+    width: 90%;
+    margin: 80px auto;
+    margin-top: 100px;
   }
-
+  
   .discover-container {
-      height: 350px;
-      gap: 20px;
+    height: 350px;
+    gap: 20px;
   }
-
+  
   .discover-content h3 {
-      font-size: 28px;
-      margin-bottom: 15px;
+    font-size: 28px;
+    margin-bottom: 15px;
   }
-
+  
   .discover-content a {
-      font-size: 20px;
-      padding: 10px 22px;
+    font-size: 20px;
+    padding: 10px 22px;
   }
-
+  
   .discover-overlay {
-      width: 100%;
-      background: linear-gradient(180deg, rgba(0,0,0,0) 10%, rgba(0,0,0,0.7) 60%, #141414 90%);
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 10%, rgba(0,0,0,0.7) 60%, #141414 90%);
   }
-
-  /* FOOTER TABLETTE */
+  
+  /* Footer */
   .footer {
-      padding: 30px 0;
+    padding: 30px 0;
   }
-
+  
   .footer-container {
-      width: 90%;
-      padding: 0;
+    width: 90%;
+    padding: 0;
   }
-
+  
+  .footer-left {
+    gap: 15px;
+  }
+  
   .footer-left p {
-      font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    line-height: 24px;
+    font-size: 14px;
   }
-
+  
+  .copy {
+    margin: 0 5px;
+  }
+  
   .footer-right {
-      gap: 30px;
+    gap: 30px;
   }
-
+  
   .footer-links a {
-      font-size: 14px;
+    font-size: 14px;
   }
-
-  /* SCROLL BUTTON */
+  
+  /* Scroll Button */
   #scrollBtn {
-      width: 45px;
-      height: 45px;
-      font-size: 20px;
-      bottom: 25px;
-      right: 25px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    bottom: 25px;
+    right: 25px;
   }
 }
 
-/* TABLETTE MODE PAYSAGE (1024px spécifique)  */
-@media screen and (min-width: 1024px) and (max-width: 1180px) {
+/* ===== TABLETTE PETIT FORMAT (769px - 850px) ===== */
+@media screen and (min-width: 769px) and (max-width: 850px) {
+  .menu ul {
+    gap: 16px;
+  }
   
-  .navbar {
-      width: 100%;
-      left: 0;
-      padding: 8px 30px;
+  .menu ul li a {
+    font-size: 14px;
   }
-
-  .menu {
-      width: 100%;
-  }
-
+  
   .inscription {
-      margin-left: auto;
+    padding: 6px 16px;
+    font-size: 13px;
   }
+  
+  .content h2 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  
+  .experience-left h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  
+  .phone-wrapper {
+    width: 240px;
+  }
+  
+  .screen2 {
+    width: 60px;
+    height: 120px;
+    top: 180px;
+  }
+  
+  .discover-container {
+    height: 300px;
+  }
+  
+  .discover-content h3 {
+    font-size: 24px;
+  }
+}
 
+/* ===== TABLETTE MODE PAYSAGE (1024px - 1180px) ===== */
+@media screen and (min-width: 1024px) and (max-width: 1180px) {
+  .navbar {
+    width: 100%;
+    left: 0;
+    padding: 8px 30px;
+  }
+  
+  .menu {
+    width: 100%;
+  }
+  
+  .inscription {
+    margin-left: auto;
+  }
+  
   .activites, 
   .experience, 
   .faq, 
   .discover {
-      width: 95%;
+    width: 95%;
   }
-
-  .content h2 {
-      font-size: 44px;
-  }
-
-  .mosaic-content h1 {
-      font-size: 48px;
-  }
-
-  .hero-subtext {
-      width: 70%;
-  }
-}
-
-/* TABLETTE PETIT FORMAT (768px - 850px) */
-@media screen and (min-width: 769px) and (max-width: 850px) {
   
-  .menu ul {
-      gap: 16px;
-  }
-
-  .menu ul li a {
-      font-size: 14px;
-  }
-
-  .inscription {
-      padding: 6px 16px;
-      font-size: 13px;
-  }
-
   .content h2 {
-      font-size: 36px;
-      line-height: 42px;
+    font-size: 44px;
   }
-
-  .experience-left h2 {
-      font-size: 32px;
-      line-height: 40px;
-  }
-
-  .phone-wrapper {
-      width: 240px;
-  }
-
-  .screen2 {
-      width: 60px;
-      height: 120px;
-      top: 180px;
-  }
-
-  .discover-container {
-      height: 300px;
-  }
-
-  .discover-content h3 {
-      font-size: 24px;
-  }
-}
-
-
-
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
   
-  /* On garde le menu horizontal normal (pas de hamburger) */
-  .hamburger {
-      display: none !important;
-  }
-
-  .menu ul {
-      position: relative;
-      left: 0;
-      width: auto;
-      height: auto;
-      background: transparent;
-      padding-top: 0;
-      flex-direction: row;
-      box-shadow: none;
-      transition: none;
-  }
-
-  .menu ul li {
-      padding: 0;
-      border-bottom: none;
-  }
-
-  .close-btn, 
-  .menu-overlay {
-      display: none !important;
-  }
-}
-
-/* Correction images activités tablette */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .card.left {
-      background-position-x: left;
-      background-size: 200% auto;
-  }
-
-  .card.right {
-      background-position-x: right;
-      background-size: 200% auto;
-  }
-}
-
-/*  écran téléphone expérience */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .experience-right {
-      align-items: center;
-  }
-
-  .phone-wrapper {
-      margin: 0 auto;
-  }
-
-  .screen {
-      background: #242424;
-  }
-}
-
-/*  grille mosaic */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .mosaic-grid img:nth-child(1) {
-      object-position: 75% center;
-  }
-
-  .mosaic-grid img:nth-child(2) {
-      object-position: 45% center;
-  }
-
-  .mosaic-grid img:nth-child(3) {
-      object-position: 75% center;
-  }
-
-  .mosaic-grid img:nth-child(4) {
-      object-position: 45% center;
-  }
-
-  .mosaic-grid img:nth-child(5) {
-      object-position: 65% center;
-  }
-}
-
-/* Ajustement espacement contenu mosaic */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .mosaic-content {
-      padding: 0 40px;
-      gap: 15px;
-  }
-
   .mosaic-content h1 {
-      margin-bottom: 10px;
+    font-size: 48px;
   }
-
-  .hero-badge {
-      margin-bottom: 5px;
-  }
-
+  
   .hero-subtext {
-      margin-bottom: 25px;
+    width: 70%;
   }
 }
-
-/* footer tablette */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .footer-left {
-      gap: 15px;
-  }
-
-  .footer-left p {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      line-height: 24px;
-  }
-
-  .copy {
-      margin: 0 5px;
-  }
-}
-
-
-
-
-
