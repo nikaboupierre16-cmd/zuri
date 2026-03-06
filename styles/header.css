@@ -1,95 +1,69 @@
+header {
+    height: 90px;
+    padding: 15px 54px;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.header-light {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+.header-dark {
+    color: #FFFFFF;
+    background-color: #000000;
+}
+
+.header-light a {
+    color: #000000;
+}
+
+.header-dark a {
+    color: #FFFFFF;
+}
 
 /* navbar */
-
-header nav{
-  position: absolute;
-  max-width: 1228px;
-  padding: 8px;
-  height: 90px;
-  top: 20px;
-  left: 9%;
-  right: 0;
-  z-index: 3;
-  background-color: #000000;
-  mix-blend-mode: difference;
-  
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1228px;
+    margin: 0 auto;
 }
 
-/* HEADER CLAIR */
-
-.header-light .menu ul li a{
-    color: #fff;
-  }
-  
-.header-light .inscription{
-    color: #000000;
-    margin-left: 63%;
-    padding: 15px 54px;
-}
-  
-  /* HEADER SOMBRE */
-  
-.header-dark .menu ul li a{
-    color: #fff;
-}
-  
-.header-dark .inscription{
-    color: black;
-    margin-left: 63%;
-    padding: 15px 54px;
-    
+nav a {
+    font-size: 16px;
 }
 
-.header-dark nav{
-    mix-blend-mode: normal;
-    background-color: transparent;
-  }
-  
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
-.menu{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+.logo img {
+    background-color: #000000;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .menu ul {
     display: flex;
     align-items: center;
     gap: 32px;
-  
-  }
-
-.logo{
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
 
-.commerçant, .livreur, .vtc{
-  width: 47px;
-  height: 17px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  
+a.inscription {
+    background-color: #000000;
+    color: #FFFFFF;
 }
 
-.inscription{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin: 0 auto;
-    width: 106px;
-    height: 33px;
-    background: #FFFFFF;
-    border-radius: 15px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-
+.header-dark a.inscription {
+    background-color: #FFFFFF
+    color: #000000;
 }
