@@ -1,30 +1,32 @@
-
-
 /* ===== RESET & BASE ===== */
-body {
-    margin: 0;
-    font-family: 'SF Pro Display', sans-serif;
+.inscription {
+    flex-grow: 0;
 }
 
+section {
+    width: 1228px;
+    margin: 120px auto;
+    margin-top: 190px;
+}
 
+section h2 + * {
+    margin-top: 20px;
+}
 
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-    position: relative;
+section h3 + p {
+    margin-top: 10px;
 }
 
 /* ===== HEADER/HERO ===== */
 .hero {
-    position: relative;
-    width: 100%;
+    background-image: url("../images/seller_fond1.jpg");
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    max-width: 100%;
     height: 1080px;
     overflow: hidden;
-    background-image: url("../images/seller_fond1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 .hero > * {
@@ -36,32 +38,26 @@ html, body {
     inset: 0;
     background: radial-gradient(circle at 100% 50%, rgba(0,0,0,0) 20%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.8) 75%, rgba(0,0,0,1) 100%),
                 linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.6) 70%, rgba(0,0,0,1) 100%);
-    z-index: 1;
+    z-index: 0;
     height: 100%;
 }
 
-/* ===== CARD DROITE (TEXTE SUR HERO) ===== */
+
 .cardright {
     position: relative;
     max-width: 1228px;
     margin: 0 auto;
-    padding: 0 24px;
     height: 371px;
     top: 322px;
     z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
-.content {
-    position: relative;
-    width: 708px;
+.cardright .content {
+    max-width: 708px;
 }
 
-.badge {
-    display: flex;
-    align-items: center;
+.cardright .content .badge {
+   
     gap: 10px;
     padding: 8px 8px 8px 10px;
     background: rgba(255, 255, 255, 0.06);
@@ -72,14 +68,13 @@ html, body {
     color: #FFFFFF;
 }
 
-#marchand {
+.cardright .content .badge #marchand {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 12px;
     padding: 2px 8px;
-    margin-left: 10px;
 }
 
-.badgecontent h2 {
+.cardright .content .badgecontent h1 {
     font-size: 80px;
     font-weight: 500;
     line-height: 100px;
@@ -89,48 +84,21 @@ html, body {
     max-width: 524px;
 }
 
-.badgecontent p {
+.cardright .content .badgecontent p {
     font-size: 18px;
     line-height: 21px;
     color: #FFFFFF;
     max-width: 706px;
 }
 
-.inscription2 {
-    background: #FFFFFF;
-    border-radius: 15px;
-    padding: 17px 24px;
-    font-weight: 600;
-    font-size: 14px;
-    color: #000000;
-    white-space: nowrap;
-    top: 420px;
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin: 0 auto;
-    font-family: 'SF Pro Display', sans-serif;
-    width: 98px;
-    height: 17px;
-    font-style: normal;
-    line-height: 17px;
-}
+
+
 
 /* ===== SECTION ACTIVITES ===== */
-.activites {
-    background: #F8F8F8;
-    padding: 120px 0;
-    width: 100%;
-    height: auto;
-}
 
-.bloc {
+
+.activites .bloc {
     max-width: 1228px;
-    margin: 0 auto;
-    padding: 0 24px;
 }
 
 /* ----- BLOC 1 ----- */
@@ -141,22 +109,22 @@ html, body {
     gap: 120px;
 }
 
-.bloc-1-left {
-    position: relative;
-    width: 600px;
+.bloc-1 .bloc-1-left {
+    max-width: 600px;
     height: 600px;
     border-radius: 24px;
     overflow: hidden;
+    position: relative;
 }
 
-.bloc-img {
+.bloc-1-left .bloc-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 24px;
 }
 
-.bloc-overlay {
+.bloc-1-left .bloc-overlay {
     position: absolute;
     inset: 0;
     z-index: 1;
@@ -165,7 +133,7 @@ html, body {
     border-radius: 24px;
 }
 
-.content2 {
+.bloc-1-left .content2 {
     position: absolute;
     bottom: 90px;
     left: 32px;
@@ -174,12 +142,9 @@ html, body {
     z-index: 2;
 }
 
-.content2 h2 {
-    width: 399px;
+.bloc-1-left .content2 h2 {
+    max-width: 399px;
     height: 80px;
-    top: 400px;
-    font-family: 'SF Pro Display', sans-serif;
-    font-style: normal;
     font-weight: 500;
     font-size: 48px;
     line-height: 52px;
@@ -187,11 +152,9 @@ html, body {
     color: #FFFFFF;
 }
 
-.content2 p {
-    position: absolute;
-    width: 458px;
-    font-family: 'SF Pro Display', sans-serif;
-    font-style: normal;
+.bloc-1-left .content2 p {
+    padding-top: 30px;
+    max-width: 458px;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
@@ -200,32 +163,26 @@ html, body {
 }
 
 .bloc-1-right {
-    position: relative;
     width: 532px;
     height: 600px;
     left: 110px;
 }
 
-.slider-container {
-    width: 100%;
+.bloc-1-right .slider-container {
     position: relative;
 }
 
-.card-stack {
-    position: relative;
-    width: 100%;
+.bloc-1-right .card-stack {
     height: 450px;
-    margin-bottom: 30px;
 }
 
-.cardo {
+.bloc-1-right .cardo {
     position: absolute;
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     border-radius: 24px;
     background: #FFFFFF;
     padding: 40px;
-    box-sizing: border-box;
     transition: all 0.5s ease;
 }
 
@@ -237,7 +194,7 @@ html, body {
     height: 468px;
     background: #FFFFFF;
     box-shadow: 0px 3.82155px 9.55387px rgba(0, 0, 0, 0.11);
-    border-radius: 11.4646px;
+    border-radius: 12px;
 }
 
 .card-back-1 {
@@ -248,29 +205,23 @@ html, body {
     height: 458px;
     background: #FFFFFF;
     box-shadow: 0px 4.07692px 10.1923px rgba(0, 0, 0, 0.11);
-    border-radius: 12.2308px;
+    border-radius: 12px;
 }
-
 .card-main {
     z-index: 3;
-    display: flex;
     width: 410px;
     height: 450px;
     background: #FFFFFF;
     box-shadow: 0px 4.256px 10.64px rgba(0, 0, 0, 0.11);
-    border-radius: 12.768px;
+    border-radius: 12px;
 }
 
-.slide p {
-    font-family: 'SF Pro Display', sans-serif;
+.cardo .slide p {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 32px;
-    display: flex;
-    align-items: center;
-    color: #060606;
-    width: 300px;
+    max-width: 300px;
     height: 350px;
     flex: none;
     order: 0;
@@ -283,7 +234,7 @@ html, body {
     animation: fadeIn 0.5s ease;
 }
 
-.slide.active {
+.cardo .slide.active {
     display: block;
 }
 
@@ -299,12 +250,12 @@ html, body {
     padding: 0px;
     gap: 20px;
     position: absolute;
-    width: 220px;
+    max-width: 220px;
     top: 518px;
     left: 110px;
 }
 
-.dot {
+.dots .dot {
     width: 60px;
     height: 5px;
     background: #E9E9E9;
@@ -312,60 +263,61 @@ html, body {
     cursor: pointer;
     transition: background 0.3s;
 }
-
-.dot.active {
+.dots .dot.active {
     background: #000000;
 }
 
+
 /* ----- BLOC 2 ----- */
 .bloc-2-wrapper {
-    padding: 17px 0px;
     gap: 32px;
     height: 1000px;
     top: 2147px;
     padding: 120px 0;
+    font-family: "SF Pro Display", sans-serif;
 }
 
 .bloc-2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 32px;
 }
 
 .bloc-2-left {
-    width: 30%;
+    position: relative;
+    max-width: 30%;
     background: #F8F8F8;
     border-radius: 24px;
     padding: 24px;
-    position: relative;
     top: 80px;
 }
 
 .bloc-2-left h2 {
     background: #FFFFFF;
     border-radius: 12px;
-    padding: 12px 16px;
+    padding: 10px 16px;
     display: inline-block;
     font-size: 20px;
     font-weight: 400;
-    margin-top: 0;
+    margin-top: 30px;
 }
 
 .para1 {
-    font-size: 29px;
+    font-size: 30px;
     line-height: 35px;
     color: #090B0E;
+    margin-bottom: 30px;
 }
 
 .para2, .para3 {
     font-size: 16px;
     line-height: 22px;
     color: #606060;
+    margin-top: 30px;
 }
 
 .bloc-2-center {
-    width: 30%;
+    max-width: 30%;
     display: flex;
     justify-content: center;
     position: relative;
@@ -445,16 +397,28 @@ html, body {
     font-size: 24px;
     font-weight: 500;
     color: #090B0E;
-    margin: 0 0 10px 0;
 }
 
 .feature p {
     font-size: 16px;
     color: #606060;
-    margin: 0;
 }
 
-/* ===== HERO-MOSAIC ===== */
+.screen2 {
+    position: absolute;
+    width: 70px;
+    height: 138px;
+    background: url(../images/fond_phone.png);
+    background-size: cover;
+    border-radius: 10px;
+    top: 218px;
+    left: 34px;
+    transform: rotate(1deg);
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== SECTION HERO MOSAIC ===== */
 .hero-mosaic {
     width: 100%;
     height: 520px;
@@ -464,9 +428,23 @@ html, body {
 }
 
 .mosaic-container {
-    position: relative;
     width: 100%;
     height: 100%;
+}
+
+.mosaic-grid {
+    display: grid;
+    grid-template-columns: 0.2fr 0.6fr 0.8fr 0.6fr 0.1fr;
+    width: 100%;
+    height: 100%;
+    gap: 0;
+}
+
+.mosaic-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .mosaic-item {
@@ -485,7 +463,7 @@ html, body {
 .item2 {
     background-image: url("../images/img2.jpg");
     background-position: 40% center;
-    transform: scaleX(-1) scale(1.0);
+    transform: scaleX(-1) scale(1);
 }
 
 .item3 {
@@ -503,65 +481,19 @@ html, body {
     background-position: 60% center;
 }
 
-.mosaic-grid {
-    display: grid;
-    grid-template-columns: 0.2fr 0.6fr 0.8fr 0.6fr 0.1fr;
-    width: 100%;
-    height: 100%;
-    gap: 0;
-}
-
-.mosaic-grid img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.mosaic-grid img:nth-child(1) {
-    object-position: 80% center;
-    transform: scale(1.1);
-}
-
-.mosaic-grid img:nth-child(2) {
-    object-position: 40% center;
-    transform: scaleX(-1) scale(1.0);
-}
-
-.mosaic-grid img:nth-child(3) {
-    object-position: 80% center;
-}
-
-.mosaic-grid img:nth-child(4) {
-    object-position: 40% center;
-}
-
-.mosaic-grid img:nth-child(5) {
-    object-position: 60% center;
-}
-
-.screen2 {
-    position: absolute;
-    width: 70px;
-    height: 138px;
-    background: url(../images/fond_phone.png);
-    background-size: cover;
-    border-radius: 10px;
-    top: 218px;
-    left: 34px;
-    transform: rotate(1deg);
-    z-index: 1;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-
 .mosaic-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.6) 100%);
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
     z-index: 1;
 }
 
 .mosaic-content {
+    font-family: "SF Pro Display", sans-serif;
     position: absolute;
     inset: 0;
     z-index: 2;
@@ -570,17 +502,11 @@ html, body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
     padding: 0 20px;
 }
 
 .mosaic-content h2 {
-    font-family: 'SF Pro Display', sans-serif;
-    font-size: 56px;
-    font-weight: 500;
-    max-width: 800px;
-    line-height: 1.1;
-    margin-bottom: 20px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -592,14 +518,10 @@ html, body {
     width: 484px;
     height: 29px;
     top: 254px;
-    font-family: 'SF Pro Display', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
     line-height: 29px;
     text-align: center;
-    letter-spacing: -0.48px;
-    color: #FFFFFF;
 }
 
 .hero-subtext {
@@ -610,54 +532,30 @@ html, body {
     width: 890px;
     height: 75px;
     top: 293px;
-    font-family: 'SF Pro Display', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
     text-align: center;
-    letter-spacing: -0.48px;
     color: rgba(255, 255, 255, 0.7);
 }
 
 .cta-button {
-    background: #FFFFFF;
+    background: #ffffff;
     color: #000;
     padding: 16px 40px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 18px;
-    text-decoration: none;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-    font-family: 'SF Pro Display', sans-serif;
 }
 
 .cta-button:hover {
     transform: scale(1.05);
 }
 
-/* ===== FAQ ===== */
+/* ===== SECTION FAQ ===== */
 .faq {
-    width: 1228px;
-    margin: 120px auto;
-    margin-top: 190px;
-}
-
-.faq-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
+    font-family: "Poppins", sans-serif;
 }
 
 .faq h2 {
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 31px;
-    color: #1A1A1A;
+    font-family: "Poppins", sans-serif;
+    color: #1a1a1a;
     margin-bottom: 30px;
 }
 
@@ -668,12 +566,11 @@ html, body {
 
 .faq-question {
     padding: 18px 0;
-    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
-    color: #1A1A1A;
+    color: #1a1a1a;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -698,7 +595,9 @@ html, body {
 .faq-reponse {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease-out, padding 0.3s ease;
+    transition:
+        max-height 0.4s ease-out,
+        padding 0.3s ease;
     background-color: #f9f9f9;
     border-radius: 0 0 12px 12px;
 }
@@ -709,7 +608,7 @@ html, body {
 }
 
 .faq-reponse p {
-    font-family: 'SF Pro Display', sans-serif;
+    font-family: "SF Pro Display", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -719,11 +618,6 @@ html, body {
 }
 
 /* ===== DISCOVER ===== */
-.discover {
-    width: 1228px;
-    margin: 120px auto;
-    margin-top: 190px;
-}
 
 .discover-container {
     display: flex;
