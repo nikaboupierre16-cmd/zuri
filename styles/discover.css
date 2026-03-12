@@ -1,0 +1,96 @@
+/* ===== SECTION DISCOVER ===== */
+
+
+.discover-container {
+    display: flex;
+    gap: 24px;
+    height: 400px;
+}
+
+.discover-card {
+    flex: 1;
+    border-radius: 28px;
+    overflow: hidden;
+    position: relative;
+    background-color: #000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s ease;
+}
+
+.discover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.discover-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.discover-card:hover img {
+    transform: scale(1.05);
+}
+
+
+
+.discover-content {
+    position: absolute;
+    bottom: 20px;
+    left: 32px;
+    right: 32px;
+    color: white;
+    z-index: 2;
+    text-align: center;
+}
+
+.discover-content h2 {
+    font-family: "SF Pro Display", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.discover-content .button  {
+    display: inline-block;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1;
+    color: #ffffff;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.discover-content a:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.discover-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 6px 12px;
+    border-radius: 30px;
+    color: white;
+    font-size: 14px;
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+
